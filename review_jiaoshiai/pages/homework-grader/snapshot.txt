@@ -1,0 +1,101 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- banner
+  - link "返回智批作业首页" [ref=e5]
+    - StaticText "智"
+    - strong
+      - StaticText "智批作业"
+    - StaticText "作业批改"
+  - StaticText "服务在线"
+- main
+  - paragraph
+    - StaticText "QUICK GRADING · 一步完成"
+  - heading "把整班作业，一次批完。" [level=1, ref=e8]
+    - StaticText "把整班作业，"
+    - emphasis
+      - StaticText "一次批完。"
+  - paragraph
+    - StaticText "上传所有学生作业，点击一次开始批改。完成后直接查看每份作业的得分和评分说明。"
+  - region "上传作业" [ref=e6]
+    - StaticText "01"
+    - heading "上传作业" [level=2, ref=e9]
+    - paragraph
+      - StaticText "可以一次选择全部文件"
+    - button "清空" [disabled, ref=e10]
+    - button "上传学生作业" [ref=e11]
+      - StaticText "↑"
+      - strong
+        - StaticText "拖入所有作业文件"
+      - StaticText "或 "
+      - button "选择文件" [ref=e17]
+      - StaticText "支持 JPG / PNG / HEIC / PDF，单个文件不超过 20 MB"
+    - LabelText
+      - StaticText "本批次满分 选填"
+    - spinbutton "本批次满分 选填" [ref=e12]
+    - StaticText "不填写则结果只显示得分"
+    - StaticText "还没有选择作业"
+    - button "开始批改 →" [disabled, ref=e13]
+      - StaticText "开始批改 →"
+  - region "批改结果" [ref=e7]
+    - paragraph
+      - StaticText "RESULTS · 批改完成后查看"
+    - heading "批改结果" [level=2, ref=e14]
+    - button "批次报告" [disabled, ref=e15]
+    - button "导出结果 ↓" [disabled, ref=e16]
+      - StaticText "导出结果 ↓"
+    - complementary "批改批次"
+      - strong
+        - StaticText "批改批次"
+      - StaticText "0 个批次"
+      - StaticText "还没有批改批次"
+    - generic
+      - paragraph
+        - StaticText "SELECTED BATCH · 当前批次"
+      - heading "请选择一个批次" [level=3, ref=e18]
+      - StaticText "批改结果会按批次归档"
+      - generic
+        - StaticText "全部作业"
+        - strong
+          - StaticText "0"
+        - StaticText "份"
+      - generic
+        - StaticText "已完成"
+        - strong
+          - StaticText "0"
+        - StaticText "份"
+      - generic
+        - StaticText "批改失败"
+        - strong
+          - StaticText "0"
+        - StaticText "份"
+      - table
+        - rowgroup
+          - row
+            - columnheader "学生 / 文件" [ref=e19]
+            - columnheader "页数" [ref=e20]
+            - columnheader "客观题" [ref=e21]
+            - columnheader "主观题" [ref=e22]
+            - columnheader "总分" [ref=e23]
+            - columnheader "状态" [ref=e24]
+            - columnheader "操作" [ref=e25]
+        - rowgroup
+      - generic
+        - StaticText "▧"
+        - strong
+          - StaticText "批改结果会显示在这里"
+        - StaticText "先上传作业，再点击“开始批改”"
+      - StaticText "当前批次共 "
+      - strong
+        - StaticText "0"
+      - StaticText " 份作业"
+- status
+  - StaticText "✓"
+  - StaticText "已完成"

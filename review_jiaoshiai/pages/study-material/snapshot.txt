@@ -1,0 +1,135 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e2]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e3]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e4]
+  - button "123321" [ref=e5]
+- link "跳到主要内容" [ref=e1]
+- banner "顶部导航"
+  - button "返回资料输入页" [ref=e6]
+    - strong
+      - StaticText "学习资料生成器"
+    - StaticText "智能讲义制作"
+  - generic "服务状态"
+    - StaticText "资料仅用于本次生成"
+    - generic
+      - StaticText "AI 分析服务已就绪"
+- main
+  - region "把知识变成 今天能学完 的路径" [ref=e7]
+    - region "讲义结果预览" [ref=e8]
+      - paragraph
+        - StaticText "从资料到真正掌握"
+      - heading "把知识变成 今天能学完 的路径" [level=1, ref=e9]
+        - StaticText "把知识变成"
+        - LineBreak "\n"
+        - generic
+          - StaticText "今天能学完"
+        - StaticText "的路径"
+      - paragraph
+        - StaticText "先知道目标，再看清规则；跟着做几题，最后检查自己会不会。"
+      - generic "学习资料包含四类核心任务"
+        - generic
+          - StaticText "01"
+          - strong
+            - StaticText "本课导航"
+          - StaticText "先看目标与知识关系"
+        - generic
+          - StaticText "02"
+          - strong
+            - StaticText "重点与策略"
+          - StaticText "讲透规则，也讲清怎么用"
+        - generic
+          - StaticText "03"
+          - strong
+            - StaticText "例题与练习"
+          - StaticText "看完整过程，再独立完成"
+        - generic
+          - StaticText "04"
+          - strong
+            - StaticText "掌握证明"
+          - StaticText "用可检查成果确认会不会"
+      - generic "生成结果结构预览"
+        - generic
+          - StaticText "CLASSROOM LEARNING GUIDE"
+          - StaticText "01"
+          - StaticText "本课核心问题"
+          - StaticText "关键判断"
+          - generic
+            - StaticText "重点策略"
+            - StaticText "例题练习"
+            - StaticText "掌握证明"
+    - form
+      - StaticText "准备资料"
+      - heading "开始制作学习路径" [level=2, ref=e10]
+      - paragraph
+        - StaticText "上传资料或直接输入知识点，再设定这次的学习目标。"
+      - StaticText "01 / 02"
+      - tablist "资料输入方式"
+        - tab "手动输入" [selected, ref=e14]
+        - tab "上传资料" [ref=e15]
+      - tabpanel
+        - LabelText
+          - StaticText "知识点或学习内容"
+        - textbox "知识点或学习内容" [ref=e16]
+        - StaticText "可输入概念、公式、题目或一段需要讲解的内容"
+        - strong
+          - StaticText "0 / 12000"
+      - StaticText "设定目标"
+      - heading "这次学习要解决什么？" [level=2, ref=e11]
+      - StaticText "02 / 02"
+      - LabelText
+        - StaticText "学习阶段"
+        - combobox "学习阶段" [expanded=false, ref=e17]: 初中
+          - MenuListPopup
+            - option "小学低年级" [ref=e26]
+            - option "小学高年级" [ref=e27]
+            - option "初中" [selected, ref=e28]
+            - option "高中" [ref=e29]
+            - option "大学及以上" [ref=e30]
+      - LabelText
+        - StaticText "学科"
+        - combobox "学科" [expanded=false, ref=e18]: 自动识别
+          - MenuListPopup
+            - option "自动识别" [selected, ref=e31]
+            - option "语文" [ref=e32]
+            - option "数学" [ref=e33]
+            - option "英语" [ref=e34]
+            - option "物理" [ref=e35]
+            - option "化学" [ref=e36]
+            - option "生物" [ref=e37]
+            - option "历史" [ref=e38]
+            - option "地理" [ref=e39]
+            - option "道德与法治" [ref=e40]
+      - group "学习重点"
+        - Legend
+          - StaticText "学习重点"
+        - LabelText [ref=e19] clickable [cursor:pointer]
+          - radio "讲透基础 理清主线，逐步解释难点" [checked=true, ref=e23]
+          - strong
+            - StaticText "讲透基础"
+          - StaticText "理清主线，逐步解释难点"
+        - LabelText [ref=e20] clickable [cursor:pointer]
+          - radio "考前提分 聚焦题型、方法和易错点" [checked=false, ref=e24]
+          - strong
+            - StaticText "考前提分"
+          - StaticText "聚焦题型、方法和易错点"
+        - LabelText [ref=e21] clickable [cursor:pointer]
+          - radio "迁移拓展 建立关联，练习举一反三" [checked=false, ref=e25]
+          - strong
+            - StaticText "迁移拓展"
+          - StaticText "建立关联，练习举一反三"
+      - strong
+        - StaticText "详细讲解"
+      - StaticText "补充分步解释、例子与记忆提示"
+      - LabelText "开启详细讲解" [ref=e12] clickable [cursor:pointer]
+        - checkbox "开启详细讲解" [checked=true, ref=e22]
+      - strong
+        - StaticText "生成完整学习资料"
+      - StaticText "按 10 个栏目组织，覆盖讲解、方法、练习与检验"
+      - button "生成学习路径" [disabled, ref=e13]
+        - StaticText "生成学习路径"
+- status

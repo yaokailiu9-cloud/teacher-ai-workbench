@@ -1,0 +1,95 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- banner
+  - heading "图老师/教辅资料生成器" [level=1, ref=e5]
+  - StaticText "生成1张图1积分，生成失败会退还相应积分。"
+  - link "购买积分" [ref=e6]
+  - button "⌫ 清空" [ref=e7]
+    - StaticText "⌫"
+    - StaticText "清空"
+  - button "↓ 下载全部" [ref=e8]
+    - StaticText "↓"
+    - StaticText "下载全部"
+- complementary "生成设置"
+  - heading "生成设置" [level=2, ref=e9]
+  - form
+    - LabelText
+      - StaticText "填写提示词"
+      - textbox "填写提示词" [required, ref=e12]
+    - strong
+      - StaticText "知识库文件上传"
+    - generic
+      - StaticText "↑"
+      - button "选择文件" [ref=e13]: 未选择任何文件
+      - StaticText "上传 PDF/Word/PNG/JPG"
+    - strong
+      - StaticText "参考风格上传"
+    - generic
+      - StaticText "↑"
+      - button "选择文件" [ref=e14]: 未选择任何文件
+      - StaticText "上传 PNG/JPG/WebP"
+    - LabelText
+      - StaticText "批量数量"
+      - strong
+        - StaticText "（可选，不建议填写数量，建议由 AI 智能判断，更精确）"
+      - spinbutton "批量数量 （可选，不建议填写数量，建议由 AI 智能判断，更精确） 张" [ref=e15]
+      - StaticText "张"
+    - LabelText
+      - StaticText "图片比例"
+      - combobox "图片比例" [expanded=false, ref=e16]: 自动（优先跟随主参考图）
+        - MenuListPopup
+          - option "自动（优先跟随主参考图）" [selected, ref=e18]
+          - option "16:9" [ref=e19]
+          - option "9:16" [ref=e20]
+          - option "4:3" [ref=e21]
+          - option "3:4" [ref=e22]
+          - option "1:1" [ref=e23]
+          - option "A4（1:1.4142）" [ref=e24]
+          - option "与参考图比例一致" [ref=e25]
+          - option "自定义比例" [ref=e26]
+    - LabelText [ref=e10] clickable [cursor:pointer]
+      - checkbox "排版设计固定" [checked=true, ref=e17]
+      - strong
+        - StaticText "排版设计固定"
+    - button "生成教辅图片" [ref=e11]
+- main
+  - generic
+    - paragraph
+      - StaticText "生成结果"
+    - StaticText "等待生成"
+  - generic
+    - article
+      - generic
+        - StaticText "语文预习单"
+        - strong
+          - StaticText "荷花"
+      - paragraph
+        - StaticText "语文预习单 / 荷花"
+    - article
+      - generic
+        - StaticText "数学练习"
+        - strong
+          - StaticText "分数加减"
+      - paragraph
+        - StaticText "数学练习 / 分数加减"
+    - article
+      - generic
+        - StaticText "科学观察"
+        - strong
+          - StaticText "植物生长"
+        - emphasis
+        - emphasis
+        - emphasis
+      - paragraph
+        - StaticText "科学观察 / 植物生长"
+- status
+- StaticText "↑"
+- StaticText "↑"

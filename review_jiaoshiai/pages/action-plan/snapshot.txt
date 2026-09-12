@@ -1,0 +1,313 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- banner
+  - heading "XX天提分行动计划器" [level=1, ref=e5]
+  - paragraph
+    - StaticText "基于试卷分析 · 科学规划 · 每天进步"
+  - StaticText "专注学习规划"
+  - strong
+    - StaticText "让提升看得见"
+- main
+  - region "生成提分行动计划" [ref=e6]
+    - form
+      - StaticText "1"
+      - heading "上传试卷或作业文件" [level=2, ref=e10]
+      - LabelText
+        - strong
+          - StaticText "拖拽文件到此处，或点击上传"
+        - StaticText "支持格式： PDF / Word / PNG / JPG"
+      - StaticText "2"
+      - heading "请输入基本信息" [level=2, ref=e11]
+      - LabelText
+        - StaticText "年级"
+        - combobox "年级" [expanded=false, ref=e21]: 高二
+          - MenuListPopup
+            - option "高一" [ref=e57]
+            - option "高二" [selected, ref=e58]
+            - option "高三" [ref=e59]
+            - option "初一" [ref=e60]
+            - option "初二" [ref=e61]
+            - option "初三" [ref=e62]
+            - option "小学高年级" [ref=e63]
+      - LabelText
+        - StaticText "科目"
+        - combobox "科目" [expanded=false, ref=e22]: 数学
+          - MenuListPopup
+            - option "数学" [selected, ref=e64]
+            - option "语文" [ref=e65]
+            - option "英语" [ref=e66]
+            - option "物理" [ref=e67]
+            - option "化学" [ref=e68]
+            - option "生物" [ref=e69]
+            - option "历史" [ref=e70]
+            - option "地理" [ref=e71]
+            - option "政治" [ref=e72]
+      - LabelText
+        - StaticText "满分分数"
+        - generic
+          - spinbutton "满分分数 分" [ref=e28]: 150
+            - StaticText "150"
+          - emphasis
+            - StaticText "分"
+      - LabelText
+        - StaticText "当前分数 "
+        - StaticText "（满分 150 分）"
+        - generic
+          - spinbutton "当前分数 （满分 150 分） 分" [ref=e29]: 92
+            - StaticText "92"
+          - emphasis
+            - StaticText "分"
+      - LabelText
+        - StaticText "目标分数 "
+        - StaticText "（满分 150 分）"
+        - generic
+          - spinbutton "目标分数 （满分 150 分） 分" [ref=e30]: 120
+            - StaticText "120"
+          - emphasis
+            - StaticText "分"
+      - LabelText
+        - StaticText "计划天数"
+        - generic
+          - spinbutton "计划天数 天" [ref=e31]: 30
+            - StaticText "30"
+          - emphasis
+            - StaticText "天"
+      - LabelText
+        - StaticText "每天学习时间"
+        - generic
+          - spinbutton "每天学习时间 小时" [ref=e32]: 2
+            - StaticText "2"
+          - emphasis
+            - StaticText "小时"
+      - button "生成提分行动计划" [ref=e12]
+        - strong
+          - StaticText "生成提分行动计划"
+      - StaticText "文件仅用于生成学习分析，不会被留存，请放心上传"
+  - region "学习分析报告" [ref=e7]
+    - heading "学习分析报告" [level=2, ref=e8]
+    - time
+      - StaticText "报告生成时间： 2024-05-20 10:30"
+    - generic "报告下载"
+      - button "下载 PDF" [ref=e13]
+        - StaticText "下载 PDF"
+      - button "下载 Word" [ref=e14]
+        - StaticText "下载 Word"
+    - paragraph
+      - StaticText "目标：在 "
+      - strong
+        - StaticText "30"
+      - StaticText " 天内从 "
+      - strong
+        - StaticText "92"
+      - StaticText " 分提升至 "
+      - strong
+        - StaticText "120"
+      - StaticText " 分"
+    - strong
+      - StaticText "目标分差： "
+      - StaticText "28"
+      - StaticText " 分"
+    - article
+      - heading "目标分差拆解" [level=3, ref=e15]
+      - StaticText "当前分数"
+      - strong
+        - StaticText "92"
+      - StaticText "−"
+      - StaticText "目标分数"
+      - strong
+        - StaticText "120"
+      - StaticText "="
+      - StaticText "目标分差"
+      - strong
+        - StaticText "28"
+      - StaticText "30天平均每天需提升"
+      - strong
+        - StaticText "0.93"
+        - StaticText " 分"
+      - strong
+        - StaticText "整体进度"
+      - StaticText "已完成 0 天 / 30 天"
+      - generic
+        - emphasis
+          - StaticText "0%"
+    - article
+      - heading "试卷薄弱点识别 （基于错题分析）" [level=3, ref=e16]
+        - StaticText "试卷薄弱点识别 （基于错题分析）"
+      - generic
+        - generic
+          - StaticText "1"
+          - StaticText "立体几何"
+          - StaticText "32%"
+        - generic
+          - StaticText "2"
+          - StaticText "函数与导数"
+          - StaticText "28%"
+        - generic
+          - StaticText "3"
+          - StaticText "解析几何"
+          - StaticText "18%"
+        - generic
+          - StaticText "4"
+          - StaticText "数列"
+          - StaticText "12%"
+        - generic
+          - StaticText "5"
+          - StaticText "概率统计"
+          - StaticText "10%"
+      - paragraph
+        - StaticText "共失分 58 分，主要集中在立体几何和函数与导数"
+    - article
+      - heading "每周提升重点" [level=3, ref=e17]
+      - generic
+        - generic
+          - strong
+            - StaticText "第1周"
+          - StaticText "立体几何基础强化 ｜ 空间想象与建系方法"
+          - emphasis
+            - StaticText "目标：+6-8分"
+        - generic
+          - strong
+            - StaticText "第2周"
+          - StaticText "函数与导数综合提升 ｜ 导数应用与最值问题"
+          - emphasis
+            - StaticText "目标：+6-8分"
+        - generic
+          - strong
+            - StaticText "第3周"
+          - StaticText "解析几何突破 ｜ 直线与圆、圆锥曲线"
+          - emphasis
+            - StaticText "目标：+5-6分"
+        - generic
+          - strong
+            - StaticText "第4周"
+          - StaticText "综合题型训练 ｜ 真题演练与错题巩固"
+          - emphasis
+            - StaticText "目标：+5-6分"
+    - article
+      - heading "每日学习动作 （示例：第1周）" [level=3, ref=e18]
+        - StaticText "每日学习动作 （示例：第1周）"
+      - generic
+        - heading "周一　立体几何基础" [level=4, ref=e23]
+        - LabelText
+          - checkbox "空间点线面关系" [checked=false, ref=e33]
+          - StaticText "空间点线面关系"
+        - LabelText
+          - checkbox "基本图形性质" [checked=false, ref=e34]
+          - StaticText "基本图形性质"
+        - LabelText
+          - checkbox "例题精讲6题" [checked=false, ref=e35]
+          - StaticText "例题精讲6题"
+        - LabelText
+          - checkbox "随堂练习8题" [checked=false, ref=e36]
+          - StaticText "随堂练习8题"
+        - heading "周二　空间向量" [level=4, ref=e24]
+        - LabelText
+          - checkbox "向量概念运算" [checked=false, ref=e37]
+          - StaticText "向量概念运算"
+        - LabelText
+          - checkbox "向量法解夹角问题" [checked=false, ref=e38]
+          - StaticText "向量法解夹角问题"
+        - LabelText
+          - checkbox "例题精讲6题" [checked=false, ref=e39]
+          - StaticText "例题精讲6题"
+        - LabelText
+          - checkbox "随堂练习8题" [checked=false, ref=e40]
+          - StaticText "随堂练习8题"
+        - heading "周三　建系与计算" [level=4, ref=e25]
+        - LabelText
+          - checkbox "空间直角坐标系" [checked=false, ref=e41]
+          - StaticText "空间直角坐标系"
+        - LabelText
+          - checkbox "距离与角度计算" [checked=false, ref=e42]
+          - StaticText "距离与角度计算"
+        - LabelText
+          - checkbox "例题精讲6题" [checked=false, ref=e43]
+          - StaticText "例题精讲6题"
+        - LabelText
+          - checkbox "随堂练习8题" [checked=false, ref=e44]
+          - StaticText "随堂练习8题"
+        - heading "周四　综合应用" [level=4, ref=e26]
+        - LabelText
+          - checkbox "综合题解题策略" [checked=false, ref=e45]
+          - StaticText "综合题解题策略"
+        - LabelText
+          - checkbox "真题片段训练" [checked=false, ref=e46]
+          - StaticText "真题片段训练"
+        - LabelText
+          - checkbox "限时训练1套" [checked=false, ref=e47]
+          - StaticText "限时训练1套"
+        - LabelText
+          - checkbox "错题整理复盘" [checked=false, ref=e48]
+          - StaticText "错题整理复盘"
+        - heading "周五　错题复盘" [level=4, ref=e27]
+        - LabelText
+          - checkbox "本周错题回顾" [checked=false, ref=e49]
+          - StaticText "本周错题回顾"
+        - LabelText
+          - checkbox "薄弱点再巩固" [checked=false, ref=e50]
+          - StaticText "薄弱点再巩固"
+        - LabelText
+          - checkbox "强化练习10题" [checked=false, ref=e51]
+          - StaticText "强化练习10题"
+        - LabelText
+          - checkbox "总结与反思" [checked=false, ref=e52]
+          - StaticText "总结与反思"
+    - article
+      - heading "错题复盘安排" [level=3, ref=e19]
+      - generic
+        - generic
+          - strong
+            - StaticText "当天回顾"
+          - StaticText "当天错题及时订正"
+          - StaticText "→"
+        - generic
+          - strong
+            - StaticText "3天后"
+          - StaticText "错题重做巩固记忆"
+          - StaticText "→"
+        - generic
+          - strong
+            - StaticText "7天后"
+          - StaticText "变式训练强化理解"
+          - StaticText "→"
+        - generic
+          - strong
+            - StaticText "15天后"
+          - StaticText "综合应用避免再错"
+          - StaticText "→"
+        - generic
+          - strong
+            - StaticText "30天后"
+          - StaticText "定期回顾长期巩固"
+    - article
+      - heading "执行检查表 （每日自检）" [level=3, ref=e20]
+        - StaticText "执行检查表 （每日自检）"
+      - StaticText "今日完成度"
+      - generic
+        - LabelText
+          - checkbox "今日学习计划已完成" [checked=false, ref=e53]
+          - StaticText "今日学习计划已完成"
+        - LabelText
+          - checkbox "学习时间达标" [checked=false, ref=e54]
+          - StaticText "学习时间达标"
+        - LabelText
+          - checkbox "错题已整理并订正" [checked=false, ref=e55]
+          - StaticText "错题已整理并订正"
+        - LabelText
+          - checkbox "今日总结与反思已完成" [checked=false, ref=e56]
+          - StaticText "今日总结与反思已完成"
+      - StaticText "0%"
+      - paragraph
+        - StaticText "完成 0 / 4 项"
+    - button "查看完整报告" [ref=e9]
+      - strong
+        - StaticText "查看完整报告"
+    - status

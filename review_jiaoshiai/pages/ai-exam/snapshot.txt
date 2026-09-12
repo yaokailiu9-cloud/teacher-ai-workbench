@@ -1,0 +1,115 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- heading "AI出题机" [level=1, ref=e5]
+- paragraph
+  - StaticText "CYBER EXAM GENERATOR"
+- generic "课程范围"
+  - LabelText
+    - StaticText "科目"
+    - combobox "科目" [expanded=false, ref=e14]: 数学
+      - MenuListPopup
+        - option "语文" [ref=e42]
+        - option "数学" [selected, ref=e43]
+        - option "英语" [ref=e44]
+        - option "物理" [ref=e45]
+        - option "化学" [ref=e46]
+        - option "生物" [ref=e47]
+        - option "历史" [ref=e48]
+        - option "地理" [ref=e49]
+        - option "政治" [ref=e50]
+  - LabelText
+    - StaticText "年级"
+    - combobox "年级" [expanded=false, ref=e15]: 高中一年级
+      - MenuListPopup
+        - group "小学"
+          - option "小学一年级" [ref=e51]
+          - option "小学二年级" [ref=e52]
+          - option "小学三年级" [ref=e53]
+          - option "小学四年级" [ref=e54]
+          - option "小学五年级" [ref=e55]
+          - option "小学六年级" [ref=e56]
+        - group "初中"
+          - option "初中一年级" [ref=e57]
+          - option "初中二年级" [ref=e58]
+          - option "初中三年级" [ref=e59]
+        - group "高中"
+          - option "高中一年级" [selected, ref=e60]
+          - option "高中二年级" [ref=e61]
+          - option "高中三年级" [ref=e62]
+- generic
+  - StaticText "组卷范围"
+  - StaticText "多知识点"
+  - combobox "选择知识点" [expanded=false, ref=e10]: -- 请选择要添加的知识点 --
+    - MenuListPopup
+      - option "-- 请选择要添加的知识点 --" [selected, ref=e21]
+      - option "不等式" [ref=e22]
+      - option "函数的概念与性质" [ref=e23]
+      - option "函数的概念与性质：定义域值域单调性奇偶性" [ref=e24]
+      - option "函数的应用：零点与方程" [ref=e25]
+      - option "函数零点与二分法" [ref=e26]
+      - option "集合与常用逻辑用语" [ref=e27]
+      - option "集合与常用逻辑用语：集合的运算、充分必要条件" [ref=e28]
+      - option "解三角形" [ref=e29]
+      - option "立体几何初步" [ref=e30]
+      - option "平面向量" [ref=e31]
+      - option "三角函数" [ref=e32]
+      - option "三角函数：正弦余弦正切函数的图像与性质" [ref=e33]
+      - option "三角函数图像变换" [ref=e34]
+      - option "三角恒等变换" [ref=e35]
+      - option "数列" [ref=e36]
+      - option "一元二次函数方程和不等式" [ref=e37]
+      - option "诱导公式" [ref=e38]
+      - option "指数函数与对数函数" [ref=e39]
+      - option "✎ 手动输入知识点" [ref=e40]
+  - button "添加" [ref=e11]
+  - button "手动添加知识点" [ref=e12]
+  - StaticText "还没有添加知识点"
+  - generic
+    - generic "组卷汇总"
+      - strong
+        - StaticText "0"
+      - StaticText "知识点"
+      - strong
+        - StaticText "0"
+      - StaticText "考点"
+      - strong
+        - StaticText "0"
+      - StaticText "题目"
+    - StaticText "添加知识点后开始配置"
+- StaticText "试卷设置"
+- LabelText
+  - StaticText "试卷类型"
+- combobox "试卷类型" [expanded=false, ref=e6]: 期末考试
+  - MenuListPopup
+    - option "随堂小测" [ref=e16]
+    - option "单元测试" [ref=e17]
+    - option "期中考试" [ref=e18]
+    - option "期末考试" [selected, ref=e19]
+    - option "模拟考试" [ref=e20]
+- checkbox "显示答案和解析" [checked=false, ref=e7]
+- LabelText
+  - StaticText "要求备注"
+- textbox "要求备注" [ref=e8]
+- button "生成试卷" [ref=e9]
+  - StaticText "生成试卷"
+- region "选择一个知识点开始配置" [ref=e13]
+  - sectionheader
+    - StaticText "考点配置"
+    - heading "选择一个知识点开始配置" [level=2, ref=e41]
+    - paragraph
+      - StaticText "添加知识点后，可在这里设置考点、题量、难度与题型。"
+    - status
+      - StaticText "出题服务已连接"
+  - StaticText "01"
+  - strong
+    - StaticText "先建立组卷范围"
+  - paragraph
+    - StaticText "从左侧添加知识点，这里将显示对应考点。"

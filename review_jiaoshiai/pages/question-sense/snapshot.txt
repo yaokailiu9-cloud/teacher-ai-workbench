@@ -1,0 +1,72 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e2]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e3]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e4]
+  - button "123321" [ref=e5]
+- heading "题感训练" [level=1, ref=e1]
+- paragraph
+  - StaticText "做100道题不如看透10道题"
+- StaticText "0"
+- StaticText "已训练"
+- StaticText "-"
+- StaticText "正确率"
+- StaticText "0"
+- StaticText "连续正确"
+- generic
+  - heading "选择年级" [level=3, ref=e6]
+  - generic
+    - generic [ref=e10] clickable [cursor:pointer, onclick]
+      - StaticText "小学三年级"
+      - LineBreak "\n"
+      - StaticText "三年级"
+    - generic [ref=e11] clickable [cursor:pointer, onclick]
+      - StaticText "小学四年级"
+      - LineBreak "\n"
+      - StaticText "四年级"
+    - generic [ref=e12] clickable [cursor:pointer, onclick]
+      - StaticText "小学五年级"
+      - LineBreak "\n"
+      - StaticText "五年级"
+    - generic [ref=e13] clickable [cursor:pointer, onclick]
+      - StaticText "小学六年级"
+      - LineBreak "\n"
+      - StaticText "六年级"
+    - generic [ref=e14] clickable [cursor:pointer, onclick]
+      - StaticText "初一"
+      - LineBreak "\n"
+      - StaticText "七年级"
+    - generic [ref=e15] clickable [cursor:pointer, onclick]
+      - StaticText "初二"
+      - LineBreak "\n"
+      - StaticText "八年级"
+    - generic [ref=e16] clickable [cursor:pointer, onclick]
+      - StaticText "初三"
+      - LineBreak "\n"
+      - StaticText "九年级"
+    - generic [ref=e17] clickable [cursor:pointer, onclick]
+      - StaticText "高一"
+      - LineBreak "\n"
+      - StaticText "十年级"
+    - generic [ref=e18] clickable [cursor:pointer, onclick]
+      - StaticText "高二"
+      - LineBreak "\n"
+      - StaticText "十一年级"
+    - generic [ref=e19] clickable [cursor:pointer, onclick]
+      - StaticText "高三"
+      - LineBreak "\n"
+      - StaticText "十二年级"
+  - heading "选择学科" [level=3, ref=e7]
+  - StaticText "请先选择年级"
+  - heading "输入知识点" [level=3, ref=e8]
+  - LabelText
+    - textbox [ref=e20]
+  - paragraph
+    - StaticText "后续题目会围绕这个知识点连续训练。"
+  - paragraph
+    - StaticText "默认快速训练：一次生成10题，完整生成后逐题作答并即时反馈。"
+  - button "开始训练" [disabled, ref=e9]

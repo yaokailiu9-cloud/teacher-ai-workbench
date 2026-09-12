@@ -1,0 +1,321 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- main
+  - sectionheader
+    - heading "AI考前抢分清单" [level=1, ref=e5]
+      - StaticText "AI考前抢分清单"
+    - paragraph
+      - StaticText "上传学习资料，AI生成个性化考前抢分清单，精准提分"
+  - complementary
+    - heading "任务输入区" [level=2, ref=e6]
+    - LabelText
+      - StaticText "*"
+      - StaticText "学段/年级"
+      - generic
+        - combobox "*学段/年级" [expanded=false, ref=e21]: 请选择学段/年级
+          - MenuListPopup
+            - option "请选择学段/年级" [selected, ref=e38]
+            - option "小学高年级" [ref=e39]
+            - option "初一" [ref=e40]
+            - option "初二" [ref=e41]
+            - option "初三" [ref=e42]
+            - option "高一" [ref=e43]
+            - option "高二" [ref=e44]
+            - option "高三" [ref=e45]
+            - option "成人考试" [ref=e46]
+        - image
+    - LabelText
+      - StaticText "*"
+      - StaticText "科目"
+      - generic
+        - combobox "*科目" [expanded=false, ref=e22]: 请选择科目
+          - MenuListPopup
+            - option "请选择科目" [selected, ref=e47]
+            - option "数学" [ref=e48]
+            - option "语文" [ref=e49]
+            - option "英语" [ref=e50]
+            - option "物理" [ref=e51]
+            - option "化学" [ref=e52]
+            - option "历史/道法" [ref=e53]
+            - option "多科综合" [ref=e54]
+        - image
+    - LabelText
+      - StaticText "*"
+      - StaticText "考试时间"
+      - generic
+        - combobox "*考试时间" [expanded=false, ref=e23]: 请选择考试时间
+          - MenuListPopup
+            - option "请选择考试时间" [selected, ref=e55]
+            - option "3天内" [ref=e56]
+            - option "1周内" [ref=e57]
+            - option "2周内" [ref=e58]
+            - option "1个月内" [ref=e59]
+            - option "待定" [ref=e60]
+        - image
+    - LabelText
+      - StaticText "*"
+      - StaticText "当前目标"
+      - generic
+        - combobox "*当前目标" [expanded=false, ref=e24]: 请选择当前目标
+          - MenuListPopup
+            - option "请选择当前目标" [selected, ref=e61]
+            - option "及格突破" [ref=e62]
+            - option "稳住基础分" [ref=e63]
+            - option "冲刺高分" [ref=e64]
+            - option "压轴题突破" [ref=e65]
+            - option "查漏补缺" [ref=e66]
+        - image
+    - generic
+      - heading "* 上传学习资料（可多选）" [level=3, ref=e10]
+        - StaticText "* 上传学习资料（可多选）"
+      - button "点击或拖拽文件到此处上传 支持 PDF / Word / PNG / JPG 单个文件 ≤50MB" [ref=e11]
+        - image
+        - strong
+          - StaticText "点击或拖拽文件到此处上传"
+        - StaticText "支持 PDF / Word / PNG / JPG"
+        - emphasis
+          - StaticText "单个文件 ≤50MB"
+    - button "生成抢分清单" [ref=e7]
+      - image
+      - StaticText "生成抢分清单"
+    - image
+    - StaticText "资料仅用于生成报告，安全加密处理"
+  - generic
+    - image
+    - heading "抢分作战地图" [level=2, ref=e8]
+    - generic "报告下载"
+      - button "下载 PDF" [ref=e12]
+        - image
+        - StaticText "下载 PDF"
+      - button "下载 Word" [ref=e13]
+        - image
+        - StaticText "下载 Word"
+    - generic
+      - image
+      - strong
+        - StaticText "1失分点"
+      - paragraph
+        - StaticText "找出关键失分原因"
+      - StaticText "→"
+    - generic
+      - image
+      - strong
+        - StaticText "2优先级"
+      - paragraph
+        - StaticText "确定抢分优先顺序"
+      - StaticText "→"
+    - generic
+      - image
+      - strong
+        - StaticText "3三天行动"
+      - paragraph
+        - StaticText "制定三天冲刺计划"
+      - StaticText "→"
+    - image
+    - strong
+      - StaticText "4风险排查"
+    - paragraph
+      - StaticText "考前风险全面排查"
+    - generic
+      - image
+      - heading "关键失分点" [level=3, ref=e14]
+      - StaticText "Top 5"
+      - article
+        - StaticText "1"
+        - heading "函数与导数综合应用 数学" [level=4, ref=e25]
+          - StaticText "函数与导数综合应用"
+          - StaticText "数学"
+        - paragraph
+          - StaticText "概念混淆，题型转化不到位"
+        - generic
+          - StaticText "失分 16 分"
+      - article
+        - StaticText "2"
+        - heading "阅读理解主旨题 语文" [level=4, ref=e26]
+          - StaticText "阅读理解主旨题"
+          - StaticText "语文"
+        - paragraph
+          - StaticText "抓不住中心思想，细节判断失误"
+        - generic
+          - StaticText "失分 12 分"
+      - article
+        - StaticText "3"
+        - heading "物理力学综合题 物理" [level=4, ref=e27]
+          - StaticText "物理力学综合题"
+          - StaticText "物理"
+        - paragraph
+          - StaticText "受力分析不完整，公式应用不当"
+        - generic
+          - StaticText "失分 11 分"
+      - article
+        - StaticText "4"
+        - heading "化学实验探究题 化学" [level=4, ref=e28]
+          - StaticText "化学实验探究题"
+          - StaticText "化学"
+        - paragraph
+          - StaticText "实验现象与结论对应不清"
+        - generic
+          - StaticText "失分 9 分"
+      - article
+        - StaticText "5"
+        - heading "英语完形填空 英语" [level=4, ref=e29]
+          - StaticText "英语完形填空"
+          - StaticText "英语"
+        - paragraph
+          - StaticText "语境理解不足，固定搭配掌握弱"
+        - generic
+          - StaticText "失分 8 分"
+    - generic
+      - image
+      - heading "抢分优先级" [level=3, ref=e15]
+      - StaticText "按优先级从高到低"
+      - article
+        - StaticText "P1"
+        - heading "函数与导数综合应用 （数学）" [level=4, ref=e30]
+          - StaticText "函数与导数综合应用"
+          - emphasis
+            - StaticText "（数学）"
+        - paragraph
+          - StaticText "高频考点 | 提分空间大 | 易短期突破"
+        - StaticText "★★★★★"
+      - article
+        - StaticText "P2"
+        - heading "阅读理解主旨题 （语文）" [level=4, ref=e31]
+          - StaticText "阅读理解主旨题"
+          - emphasis
+            - StaticText "（语文）"
+        - paragraph
+          - StaticText "高频考点 | 提分空间大 | 易短期突破"
+        - StaticText "★★★★"
+        - StaticText "☆"
+      - article
+        - StaticText "P3"
+        - heading "物理力学综合题 （物理）" [level=4, ref=e32]
+          - StaticText "物理力学综合题"
+          - emphasis
+            - StaticText "（物理）"
+        - paragraph
+          - StaticText "中高频考点 | 提分空间大 | 需强化训练"
+        - StaticText "★★★★"
+        - StaticText "☆"
+      - article
+        - StaticText "P4"
+        - heading "化学实验探究题 （化学）" [level=4, ref=e33]
+          - StaticText "化学实验探究题"
+          - emphasis
+            - StaticText "（化学）"
+        - paragraph
+          - StaticText "中频考点 | 提分空间中等 | 稳扎稳打"
+        - StaticText "★★"
+        - StaticText "☆☆☆"
+      - article
+        - StaticText "P5"
+        - heading "英语完形填空 （英语）" [level=4, ref=e34]
+          - StaticText "英语完形填空"
+          - emphasis
+            - StaticText "（英语）"
+        - paragraph
+          - StaticText "中频考点 | 提分空间中等 | 积累为主"
+        - StaticText "★★"
+        - StaticText "☆☆☆"
+    - generic
+      - image
+      - heading "三天冲刺安排" [level=3, ref=e16]
+      - generic
+        - article
+          - StaticText "Day 1"
+          - heading "突破高优先级（P1）" [level=4, ref=e35]
+            - StaticText "突破高优先级（P1）"
+          - list
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "函数与导数核心题型集中训练"
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "整理错题本，归纳解题模板"
+          - StaticText "↓"
+        - article
+          - StaticText "Day 2"
+          - heading "攻克次高优先级（P2）" [level=4, ref=e36]
+            - StaticText "攻克次高优先级（P2）"
+          - list
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "阅读理解主旨题技巧强化"
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "真题专项训练，错题复盘"
+          - StaticText "↓"
+        - article
+          - StaticText "Day 3"
+          - heading "巩固提升 + 全真演练" [level=4, ref=e37]
+            - StaticText "巩固提升 + 全真演练"
+          - list
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "P3-P5 重点题型巩固"
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "全真模拟测试，查漏补缺"
+    - generic
+      - image
+      - heading "必背必练清单" [level=3, ref=e17]
+      - heading "必背清单（核心知识点）" [level=4, ref=e18]
+      - image
+      - StaticText "函数单调性与极值求解步骤"
+      - image
+      - StaticText "导数应用的常见题型结论"
+      - image
+      - StaticText "阅读理解主旨句识别方法"
+      - image
+      - StaticText "物理受力分析基本思路"
+      - image
+      - StaticText "化学常见实验现象与结论"
+      - heading "必练清单（高频题型）" [level=4, ref=e19]
+      - image
+      - StaticText "函数与导数中档题 × 10 题"
+      - image
+      - StaticText "阅读理解主旨题 × 10 篇"
+      - image
+      - StaticText "力学综合题 × 6 题"
+      - image
+      - StaticText "化学实验探究题 × 6 题"
+      - image
+      - StaticText "完形填空 × 10 篇"
+    - generic
+      - image
+      - heading "考前风险提醒" [level=3, ref=e20]
+      - image
+      - StaticText "时间分配风险"
+      - StaticText "："
+      - StaticText "注意大题时间控制，避免因小题丢分过多。"
+      - image
+      - StaticText "粗心失分风险"
+      - StaticText "："
+      - StaticText "计算、单位、符号等细节需反复检查。"
+      - image
+      - StaticText "知识盲区风险"
+      - StaticText "："
+      - StaticText "回顾错题本，确保相似题型不再失分。"
+      - image
+      - StaticText "状态波动风险"
+      - StaticText "："
+      - StaticText "考前保持规律作息，避免熬夜影响发挥。"
+      - image
+      - StaticText "考试物品风险"
+      - StaticText "："
+      - StaticText "提前准备好准考证、文具，避免临场慌乱。"
+    - button "查看完整内容" [ref=e9]
+      - image
+      - StaticText "查看完整内容"
+    - image
+    - StaticText "报告内容仅供学生个人学习使用，请勿外传"
+- alert

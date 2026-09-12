@@ -1,0 +1,60 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e2]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e3]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e4]
+  - button "123321" [ref=e5]
+- generic [ref=e1] clickable [onclick]
+  - banner
+    - strong
+      - StaticText "课堂预习单"
+    - StaticText "资料仅用于本次生成"
+  - main
+    - complementary
+      - StaticText "准备资料"
+      - heading "新建预习单" [level=1, ref=e6]
+      - region "学习资料" [ref=e7]
+        - heading "学习资料" [level=2, ref=e11]
+        - StaticText "必填"
+        - button "添加或拖入资料 PDF · DOCX · JPG · PNG" [ref=e12]
+          - strong
+            - StaticText "添加或拖入资料"
+          - StaticText "PDF · DOCX · JPG · PNG"
+        - button "选择文件" [ref=e13]: 未选择任何文件
+      - region "学习背景" [ref=e8]
+        - heading "学习背景" [level=2, ref=e14]
+        - StaticText "选填"
+        - LabelText
+          - StaticText "学段 / 年级"
+          - textbox "学段 / 年级" [ref=e19]
+        - LabelText
+          - StaticText "学科"
+          - textbox "学科" [ref=e20]
+      - region "预习侧重" [ref=e9]
+        - heading "预习侧重" [level=2, ref=e15]
+        - radiogroup "预习侧重"
+          - radio "基础导学" [checked=true, ref=e21]
+            - StaticText "基础导学"
+          - radio "深度思考" [checked=false, ref=e22]
+            - StaticText "深度思考"
+          - radio "考前强化" [checked=false, ref=e23]
+            - StaticText "考前强化"
+        - paragraph
+          - StaticText "建立知识地图"
+      - region "补充要求" [ref=e10]
+        - heading "补充要求" [level=2, ref=e16]
+        - StaticText "0"
+        - StaticText "/2000"
+        - textbox "例如：增加古诗词背诵检查，控制在 25 分钟内完成" [ref=e17]
+      - button "生成课堂预习单" [disabled, ref=e18]
+    - generic
+      - image "一张带批注的学习资料与铅笔"
+      - generic
+        - StaticText "等待生成"
+        - heading "预习单将在这里呈现" [level=2, ref=e24]
+        - paragraph
+          - StaticText "尚无内容"

@@ -1,0 +1,80 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- main
+  - region "把一份试卷， 变成一堂能直接讲的课。" [ref=e5]
+    - StaticText "教师备课工作台"
+    - heading "把一份试卷， 变成一堂能直接讲的课。" [level=1, ref=e7]
+      - StaticText "把一份试卷，"
+      - strong
+        - StaticText "变成一堂能直接讲的课。"
+    - paragraph
+      - StaticText "题干、图形、答案与完整解析全部进入 16:9 课件。每题默认一张，超长最多两张。"
+    - list "课件生成流程"
+      - listitem [level=1]
+        - StaticText "01"
+        - strong
+          - StaticText "上传"
+        - StaticText "原图 / PDF / Word"
+      - listitem [level=1]
+        - StaticText "02"
+        - strong
+          - StaticText "识别"
+        - StaticText "题目与图形定位"
+      - listitem [level=1]
+        - StaticText "03"
+        - strong
+          - StaticText "编排"
+        - StaticText "课堂讲评结构"
+      - listitem [level=1]
+        - StaticText "04"
+        - strong
+          - StaticText "导出"
+        - StaticText "16:9 PPTX"
+    - generic
+      - paragraph
+        - StaticText "新建讲评课件"
+      - heading "先放入试卷" [level=2, ref=e9]
+      - StaticText "16:9"
+      - group "试卷上传区域" [ref=e10] clickable [cursor:pointer]
+        - paragraph
+          - StaticText "拖入试卷，或从电脑选择"
+        - paragraph
+          - StaticText "支持 PNG/JPG、PDF、DOCX；最多 20 个文件、合计 200 页，单个不超过 50MB。"
+        - button "选择试卷" [ref=e11]
+          - image
+          - StaticText "选择试卷"
+        - button "拍照上传" [ref=e12]
+          - image
+          - StaticText "拍照上传"
+        - paragraph
+          - StaticText "清晰原图或 PDF 能更完整地保留坐标轴、表格与几何辅助线。"
+  - region "系统替你做排版，判断仍由教师完成" [ref=e6]
+    - paragraph
+      - StaticText "从识别到课堂"
+    - heading "系统替你做排版，判断仍由教师完成" [level=2, ref=e8]
+    - paragraph
+      - StaticText "生成后逐题核对图形、答案和解题路径，再下载用于讲评。"
+    - list
+      - listitem [level=1]
+        - StaticText "01"
+        - heading "上传原卷" [level=3, ref=e13]
+        - paragraph
+          - StaticText "尽量使用清晰原图或原始 PDF。"
+      - listitem [level=1]
+        - StaticText "02"
+        - heading "逐题核对" [level=3, ref=e14]
+        - paragraph
+          - StaticText "重点检查图形裁切、正确答案与解析。"
+      - listitem [level=1]
+        - StaticText "03"
+        - heading "带入课堂" [level=3, ref=e15]
+        - paragraph
+          - StaticText "检查内容与字号，再导出完整 16:9 PPTX。"

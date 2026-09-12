@@ -1,0 +1,216 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e2]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e3]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e4]
+  - button "123321" [ref=e5]
+- generic [ref=e1] clickable [onclick]
+  - banner
+    - heading "AI审题训练" [level=1, ref=e6]
+    - paragraph
+      - StaticText "先证明读准，再开始解题"
+  - complementary "题目资料"
+    - form
+      - LabelText
+        - StaticText "学科"
+      - combobox "学科" [expanded=false, ref=e13]: 数学
+        - MenuListPopup
+          - option "数学" [selected, ref=e23]
+          - option "语文" [ref=e24]
+          - option "英语" [ref=e25]
+          - option "物理" [ref=e26]
+          - option "化学" [ref=e27]
+          - option "生物" [ref=e28]
+          - option "历史" [ref=e29]
+          - option "地理" [ref=e30]
+          - option "道德与法治" [ref=e31]
+          - option "通用" [ref=e32]
+      - LabelText
+        - StaticText "年级"
+      - combobox "年级" [expanded=false, ref=e14]: 初中二年级
+        - MenuListPopup
+          - option "小学一年级" [ref=e33]
+          - option "小学二年级" [ref=e34]
+          - option "小学三年级" [ref=e35]
+          - option "小学四年级" [ref=e36]
+          - option "小学五年级" [ref=e37]
+          - option "小学六年级" [ref=e38]
+          - option "初中一年级" [ref=e39]
+          - option "初中二年级" [selected, ref=e40]
+          - option "初中三年级" [ref=e41]
+          - option "高中一年级" [ref=e42]
+          - option "高中二年级" [ref=e43]
+          - option "高中三年级" [ref=e44]
+      - LabelText
+        - StaticText "上传题目、试卷或作业"
+      - button "上传题目、试卷或作业: 未选择任何文件 点击或拖拽文件到此处上传 PDF / Word / PNG / JPG" [ref=e8]
+        - button "上传题目、试卷或作业" [ref=e15]: 未选择任何文件
+        - strong
+          - StaticText "点击或拖拽文件到此处上传"
+        - StaticText "PDF / Word / PNG / JPG"
+      - LabelText
+        - StaticText "补充说明"
+      - StaticText "（可选）"
+      - generic
+        - textbox "补充说明" [ref=e16]
+        - StaticText "0"
+        - StaticText " / 200"
+      - button "开始审题分析" [ref=e9]
+        - image
+        - StaticText "开始审题分析"
+  - main
+    - heading "审题结果" [level=2, ref=e7]
+    - generic "下载完整报告"
+      - button "下载PDF" [ref=e10]
+        - image
+        - StaticText "下载PDF"
+      - button "下载WORD" [ref=e11]
+        - image
+        - StaticText "下载WORD"
+    - generic
+      - heading "【题目预览】" [level=3, ref=e12]
+      - paragraph
+        - StaticText "某班"
+        - mark
+          - StaticText "共有"
+        - StaticText "学生 "
+        - mark
+          - StaticText "48 人"
+        - StaticText "，\n其中"
+        - mark
+          - StaticText "至少"
+        - StaticText "会"
+        - mark
+          - StaticText "打篮球"
+        - StaticText "的有 "
+        - mark
+          - StaticText "28 人"
+        - StaticText "，"
+        - mark
+          - StaticText "至少"
+        - StaticText "会"
+        - mark
+          - StaticText "打乒乓球"
+        - StaticText "的有 "
+        - mark
+          - StaticText "24 人"
+        - StaticText "，\n"
+        - mark
+          - StaticText "两项都会"
+        - StaticText "的有 "
+        - mark
+          - StaticText "12 人"
+        - StaticText "。问"
+        - mark
+          - StaticText "两项都不会"
+        - StaticText "的有多少人？"
+      - DescriptionList
+        - term "学科："
+        - definition
+          - StaticText "数学"
+        - term "年级："
+        - definition
+          - StaticText "初中二年级"
+        - term "题型："
+        - definition
+          - StaticText "集合问题"
+        - term "来源："
+        - definition
+          - StaticText "用户上传"
+        - term "识别时间："
+        - definition
+          - StaticText "2025-05-24 10:30:25"
+        - term "置信度："
+        - definition
+          - StaticText "0.97"
+    - status
+      - StaticText "可能遗漏："
+      - StaticText "“至少”表示数量下限"
+    - generic
+      - sectionheader
+        - StaticText "01"
+        - heading "任务词" [level=3, ref=e17]
+        - image
+      - StaticText "问"
+      - paragraph
+        - StaticText "两项都不会的有多少人？"
+      - paragraph
+        - StaticText "明确需要求解的目标量。"
+    - generic
+      - sectionheader
+        - StaticText "02"
+        - heading "限制条件" [level=3, ref=e18]
+        - image
+      - list
+        - listitem [level=1]
+          - ListMarker "• "
+          - StaticText "至少会打篮球的有 28 人"
+        - listitem [level=1]
+          - ListMarker "• "
+          - StaticText "至少会打乒乓球的有 24 人"
+        - listitem [level=1]
+          - ListMarker "• "
+          - StaticText "两项都会的有 12 人"
+      - paragraph
+        - StaticText "对范围、数量与关系的限定条件。"
+    - generic
+      - sectionheader
+        - StaticText "03"
+        - heading "关键数据" [level=3, ref=e19]
+        - image
+      - strong
+        - StaticText "总人数："
+      - StaticText "48 人"
+      - strong
+        - StaticText "篮球："
+      - StaticText "28 人"
+      - strong
+        - StaticText "乒乓球："
+      - StaticText "24 人"
+      - strong
+        - StaticText "两项都会："
+      - StaticText "12 人"
+      - paragraph
+        - StaticText "用于判断与计算的核心信息。"
+    - generic
+      - sectionheader
+        - StaticText "04"
+        - heading "隐藏条件" [level=3, ref=e20]
+        - image
+      - list
+        - listitem [level=1]
+          - ListMarker "• "
+          - StaticText "“至少”表示包含两项都会的人"
+        - listitem [level=1]
+          - ListMarker "• "
+          - StaticText "集合为同一总体（该班学生）"
+        - listitem [level=1]
+          - ListMarker "• "
+          - StaticText "数据为非负整数"
+      - paragraph
+        - StaticText "未直接表述，但影响解题的条件。"
+    - generic
+      - sectionheader
+        - StaticText "05"
+        - heading "干扰信息" [level=3, ref=e21]
+        - image
+      - StaticText "无明显干扰信息。"
+      - paragraph
+        - StaticText "题目中与当前任务无关的信息。"
+    - generic
+      - sectionheader
+        - StaticText "06"
+        - heading "作答范围" [level=3, ref=e22]
+        - image
+      - StaticText "仅需求解："
+      - StaticText "两项都不会的学生人数"
+      - paragraph
+        - StaticText "只回答题目要求的对象、范围与形式。"
+    - generic
+      - StaticText "题意复述"
+      - paragraph
+        - StaticText "已知全班人数和会两项运动的人数关系，只需明确两项都不会的学生人数。"

@@ -1,0 +1,90 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- main
+  - complementary
+    - paragraph
+      - StaticText "EXAM REVIEW / SCORE BOOST"
+    - heading "卷后提分" [level=1, ref=e5]
+  - generic
+    - strong
+      - StaticText "tune"
+      - StaticText "填写本次考试信息"
+    - StaticText "school"
+    - StaticText "年级"
+    - generic
+      - button "小学" [ref=e11]
+      - button "初一" [ref=e12]
+      - button "初二" [ref=e13]
+      - button "初三" [ref=e14]
+      - button "高一" [ref=e15]
+      - button "高二" [ref=e16]
+      - button "高三" [ref=e17]
+    - StaticText "history_edu"
+    - StaticText "考试"
+    - generic
+      - button "单元测验" [ref=e18]
+      - button "月考" [ref=e19]
+      - button "期中考试" [ref=e20]
+      - button "期末考试" [ref=e21]
+      - button "模拟考试" [ref=e22]
+    - StaticText "menu_book"
+    - StaticText "学科"
+    - generic
+      - button "语文 menu_book" [ref=e23]
+        - StaticText "语文"
+        - StaticText "menu_book"
+      - button "数学 calculate" [ref=e24]
+        - StaticText "数学"
+        - StaticText "calculate"
+      - button "英语 translate" [ref=e25]
+        - StaticText "英语"
+        - StaticText "translate"
+      - button "物理 science" [ref=e26]
+        - StaticText "物理"
+        - StaticText "science"
+      - button "化学 biotech" [ref=e27]
+        - StaticText "化学"
+        - StaticText "biotech"
+      - button "生物 eco" [ref=e28]
+        - StaticText "生物"
+        - StaticText "eco"
+      - button "历史 history_edu" [ref=e29]
+        - StaticText "历史"
+        - StaticText "history_edu"
+      - button "地理 public" [ref=e30]
+        - StaticText "地理"
+        - StaticText "public"
+      - button "政治 gavel" [ref=e31]
+        - StaticText "政治"
+        - StaticText "gavel"
+    - StaticText "calculate"
+    - StaticText "分数"
+    - spinbutton "本次得分" [ref=e6]
+    - spinbutton "卷面总分" [ref=e7]
+    - spinbutton "下次目标分（可选）" [ref=e8]
+    - button "开始分析 → arrow_forward" [disabled, ref=e9]
+      - StaticText "开始分析"
+      - StaticText "→"
+      - StaticText "arrow_forward"
+    - status
+      - StaticText "选好学科和分数后即可开始分析。"
+    - StaticText "upload_file"
+    - StaticText "上传卷面 / 成绩图"
+    - LabelText [ref=e10] clickable [cursor:pointer]
+      - StaticText "imagesmode"
+      - StaticText "添加图片素材"
+      - generic
+        - StaticText "支持 PNG / JPG / WEBP / PDF，最多 10 张。"
+        - LineBreak "\n"
+        - StaticText "提交前会自动压缩到更适合识别的尺寸，减少等待时间。"
+      - button "imagesmode 添加图片素材 支持 PNG / JPG / WEBP / PDF，最多 10 张。 提交前会自动压缩到更适合识别的尺寸，减少等待时间。" [ref=e32]: 未选择任何文件
+    - list
+- StaticText "→"

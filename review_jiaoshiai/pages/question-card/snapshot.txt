@@ -1,0 +1,223 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- complementary
+  - heading "AI题型提分卡" [level=1, ref=e5]
+  - paragraph
+    - StaticText "为老师节省备课时间"
+  - form
+    - LabelText
+      - StaticText "年级"
+      - combobox "年级" [expanded=false, ref=e12]: 初中八年级
+        - MenuListPopup
+          - option "初中八年级" [selected, ref=e30]
+          - option "初中七年级" [ref=e31]
+          - option "初中九年级" [ref=e32]
+          - option "小学高年级" [ref=e33]
+          - option "高中一年级" [ref=e34]
+          - option "高中二年级" [ref=e35]
+          - option "高中三年级" [ref=e36]
+    - LabelText
+      - StaticText "科目"
+      - combobox "科目" [expanded=false, ref=e13]: 数学
+        - MenuListPopup
+          - option "数学" [selected, ref=e37]
+          - option "语文" [ref=e38]
+          - option "英语" [ref=e39]
+          - option "物理" [ref=e40]
+          - option "化学" [ref=e41]
+          - option "生物" [ref=e42]
+          - option "历史" [ref=e43]
+          - option "地理" [ref=e44]
+          - option "政治" [ref=e45]
+    - LabelText
+      - StaticText "题型名称"
+      - textbox "题型名称" [ref=e14]
+    - StaticText "上传题目文件"
+    - generic [ref=e6] focusable [tabindex]
+      - button "选择文件" [ref=e15]: 未选择任何文件
+      - paragraph
+        - StaticText "点击或拖拽文件到此处上传"
+      - StaticText "支持 PDF、Word、PNG、JPG"
+      - button "查看示例" [ref=e16]
+    - button "生成题型提分卡" [ref=e7]
+      - StaticText "生成题型提分卡"
+  - strong
+    - StaticText "使用提示"
+  - list
+    - listitem [level=1]
+      - ListMarker "• "
+      - StaticText "上传含题目的文件，AI 将自动识别题型并生成提分卡"
+    - listitem [level=1]
+      - ListMarker "• "
+      - StaticText "结果包含教学分析、方法步骤、跟练题及建议"
+- main
+  - sectionheader
+    - heading "题型提分报告" [level=2, ref=e8]
+    - button "下载 PDF" [ref=e9]
+    - button "下载 Word" [ref=e10]
+    - button "重新生成" [ref=e11]
+  - generic
+    - strong
+      - StaticText "年级："
+    - StaticText "初中八年级"
+    - strong
+      - StaticText "科目："
+    - StaticText "数学"
+    - strong
+      - StaticText "题型："
+    - StaticText "二元一次方程组的应用（行程问题）"
+    - StaticText "生成时间：2025-05-24 14:32"
+    - generic
+      - StaticText "1"
+      - heading "题型识别" [level=3, ref=e17]
+      - StaticText "识别结果"
+      - StaticText "二元一次方程组的应用（行程问题）"
+      - StaticText "高频考点"
+      - StaticText "中档难度"
+      - StaticText "题型特征"
+      - paragraph
+        - StaticText "已知路程、速度、时间等量的关系，设未知数列方程组求解。"
+      - StaticText "常见考查方式"
+      - StaticText "相遇问题"
+      - StaticText "追及问题"
+      - StaticText "环形路问题"
+      - StaticText "流水行船问题"
+    - generic
+      - StaticText "2"
+      - heading "考点拆解" [level=3, ref=e18]
+      - paragraph
+        - StaticText "等量关系"
+      - paragraph
+        - StaticText "路程 = 速度 × 时间；相遇时路程和；追及时路程差。"
+      - paragraph
+        - StaticText "设未知数"
+      - paragraph
+        - StaticText "通常设速度或时间为未知数，注意单位统一。"
+      - paragraph
+        - StaticText "列方程组"
+      - paragraph
+        - StaticText "根据题意列出两个相等关系，构成二元一次方程组。"
+      - paragraph
+        - StaticText "解与检验"
+      - paragraph
+        - StaticText "解方程组求出未知数，带入原题检验并答题。"
+      - StaticText "考点提示"
+      - paragraph
+        - StaticText "行程问题的核心是找准等量关系，根据运动过程选择合适的等量关系列方程。"
+    - generic
+      - StaticText "3"
+      - heading "三步解题法" [level=3, ref=e19]
+      - StaticText "1"
+      - StaticText "↓"
+      - paragraph
+        - StaticText "审题建模"
+      - paragraph
+        - StaticText "抓住关键词（相遇、追及、同时、往返等），画线段图梳理数量关系。"
+      - StaticText "2"
+      - StaticText "↓"
+      - paragraph
+        - StaticText "列方程组"
+      - paragraph
+        - StaticText "设未知数，根据等量关系列出二元一次方程组。"
+      - StaticText "3"
+      - paragraph
+        - StaticText "求解并检验"
+      - paragraph
+        - StaticText "解方程组得到结果，检验是否符合题意，写出答案。"
+    - generic
+      - StaticText "4"
+      - heading "易错提醒" [level=3, ref=e20]
+      - paragraph
+        - StaticText "等量关系错误"
+      - paragraph
+        - StaticText "忽略同时、相遇、追及等关键词，导致等量关系不正确。"
+      - paragraph
+        - StaticText "单位不统一"
+      - paragraph
+        - StaticText "速度单位（千米/时、米/分等）不统一，导致计算错误。"
+      - paragraph
+        - StaticText "方程组列错"
+      - paragraph
+        - StaticText "方程组中系数或常数项错误，或只列一个方程。"
+      - paragraph
+        - StaticText "检验缺失"
+      - paragraph
+        - StaticText "未检验结果是否符合题意，导致答案错误。"
+    - generic
+      - StaticText "5"
+      - heading "跟练题" [level=3, ref=e21]
+      - StaticText "建议用时：12分钟"
+      - paragraph
+        - StaticText "题目 1（基础巩固）"
+      - paragraph
+        - StaticText "甲、乙两人从相距 18 千米的两地同时出发，相向而行，甲的速度是 5 千米/时，乙的速度是 4 千米/时。两人出发后多少小时相遇？"
+      - group
+        - DisclosureTriangle "查看参考答案与解析" [expanded=false]
+      - paragraph
+        - StaticText "题目 2（能力提升）"
+      - paragraph
+        - StaticText "甲、乙两人从 A、B 两地同时出发，同向而行，甲的速度是 6 千米/时，乙的速度是 4 千米/时，甲在乙后 20 分钟追上乙。A、B 两地相距多少千米？"
+      - group
+        - DisclosureTriangle "查看参考答案与解析" [expanded=false]
+    - generic
+      - StaticText "6"
+      - heading "评分 / 检查清单" [level=3, ref=e22]
+      - StaticText "学生自查"
+      - table
+        - rowgroup
+          - row
+            - columnheader "检查项" [ref=e56]
+            - columnheader "自查" [ref=e57]
+            - columnheader "得分" [ref=e58]
+        - row
+          - cell "1. 关键条件是否抓全（时间、速度、路程等）" [ref=e46]
+          - cell
+          - cell "/25" [ref=e47]
+        - row
+          - cell "2. 等量关系是否正确" [ref=e48]
+          - cell
+          - cell "/25" [ref=e49]
+        - row
+          - cell "3. 方程组是否正确" [ref=e50]
+          - cell
+          - cell "/25" [ref=e51]
+        - row
+          - cell "4. 计算过程是否正确" [ref=e52]
+          - cell
+          - cell "/15" [ref=e53]
+        - row
+          - cell "5. 结果是否检验并符合题意" [ref=e54]
+          - cell
+          - cell "/10" [ref=e55]
+        - rowgroup
+          - row
+            - columnheader "合计" [ref=e59]
+            - columnheader
+            - columnheader "/100" [ref=e60]
+    - generic
+      - StaticText "7"
+      - heading "下一步练习建议" [level=3, ref=e23]
+      - StaticText "建议掌握程度"
+      - StaticText "70%"
+      - heading "基础巩固" [level=4, ref=e24]
+      - paragraph
+        - StaticText "建议完成 8 道基础题，巩固等量关系与方程组建立。"
+      - button "去练习（8题）" [ref=e25]
+      - heading "能力提升" [level=4, ref=e26]
+      - paragraph
+        - StaticText "建议完成 6 道提升题，训练多条件行程问题建模能力。"
+      - button "去练习（6题）" [ref=e27]
+      - heading "拓展挑战" [level=4, ref=e28]
+      - paragraph
+        - StaticText "建议完成 4 道拓展题，提升综合应用与变式能力。"
+      - button "去练习（4题）" [ref=e29]
+      - StaticText "完成练习后，可重新生成提分卡，查看进步情况。"
+- status

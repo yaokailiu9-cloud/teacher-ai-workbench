@@ -1,0 +1,293 @@
+- banner "主导航"
+  - link "教师AI赋能站首页" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "TEACHER AI WORKSTATION"
+  - navigation "账户与积分" [ref=e2]
+    - button "注册 / 登录" [ref=e6]
+    - button "积分兑换" [ref=e7]
+      - StaticText "积分兑换"
+- main
+  - region "AI赋能教师提效、教学提分、教培增长。" [ref=e3]
+    - image "由知识纸页、光学玻璃与智能网络构成的抽象教育空间"
+    - generic
+      - StaticText "教师工作的新基础设施"
+      - StaticText "2026"
+      - heading "AI赋能教师提效、教学提分、教培增长。" [level=1, ref=e9]
+      - link "进入教师工作台 ↘" [ref=e10]
+        - StaticText "进入教师工作台"
+        - StaticText "↘"
+      - button "登录后开始使用" [ref=e11]
+    - complementary "三个工作板块"
+      - StaticText "01"
+      - StaticText "02"
+      - StaticText "03"
+    - link "向下浏览" [ref=e8]
+      - StaticText "向下浏览"
+  - region "三个 AI 工具板块" [ref=e4]
+    - generic
+      - generic
+        - paragraph
+          - StaticText "WORKBENCH / 01"
+        - heading "AI赋能教师提效" [level=2, ref=e12]
+        - paragraph
+          - StaticText "把备课、资料和课堂制作变成可复用的工作流。"
+        - link "MODULE / 03 1 积分 / 次 学习资料生成器 把教材整理成学习路径 从理解、练习到复习，生成可下载的完整学习讲义。 进入工具 ↗" [ref=e13]
+          - StaticText "MODULE / 03"
+          - StaticText "1 积分 / 次"
+          - heading "学习资料生成器" [level=3, ref=e39]
+          - paragraph
+            - StaticText "把教材整理成学习路径"
+          - paragraph
+            - StaticText "从理解、练习到复习，生成可下载的完整学习讲义。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 08 1 积分 / 5页 题卷重排WORD 把任意上传资料完整重排成 Word 完整识别标题、正文、题目、公式、表格与图形，导出可编辑文档。 进入工具 ↗" [ref=e14]
+          - StaticText "MODULE / 08"
+          - StaticText "1 积分 / 5页"
+          - heading "题卷重排WORD" [level=3, ref=e40]
+          - paragraph
+            - StaticText "把任意上传资料完整重排成 Word"
+          - paragraph
+            - StaticText "完整识别标题、正文、题目、公式、表格与图形，导出可编辑文档。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 06 1 积分 / 次 试卷讲评PPT 把试卷变成一堂讲评课 识别题目与图形，编排为课堂可直接使用的 16:9 课件。 进入工具 ↗" [ref=e15]
+          - StaticText "MODULE / 06"
+          - StaticText "1 积分 / 次"
+          - heading "试卷讲评PPT" [level=3, ref=e41]
+          - paragraph
+            - StaticText "把试卷变成一堂讲评课"
+          - paragraph
+            - StaticText "识别题目与图形，编排为课堂可直接使用的 16:9 课件。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 01 1 积分 / 次 AI出题机 从教学目标到完整试卷 按年级、学科、知识点与难度生成可编辑试卷。 进入工具 ↗" [ref=e16]
+          - StaticText "MODULE / 01"
+          - StaticText "1 积分 / 次"
+          - heading "AI出题机" [level=3, ref=e42]
+          - paragraph
+            - StaticText "从教学目标到完整试卷"
+          - paragraph
+            - StaticText "按年级、学科、知识点与难度生成可编辑试卷。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 22 1 积分 / 次 试卷变式机 把原题变成分层训练 上传原卷后生成相似题、变式题与综合应用题。 进入工具 ↗" [ref=e17]
+          - StaticText "MODULE / 22"
+          - StaticText "1 积分 / 次"
+          - heading "试卷变式机" [level=3, ref=e43]
+          - paragraph
+            - StaticText "把原题变成分层训练"
+          - paragraph
+            - StaticText "上传原卷后生成相似题、变式题与综合应用题。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 23 1 积分 / 张 教辅资料制作器 批量制作课堂教辅图 结合知识库和参考风格，生成多比例教学素材。 进入工具 ↗" [ref=e18]
+          - StaticText "MODULE / 23"
+          - StaticText "1 积分 / 张"
+          - heading "教辅资料制作器" [level=3, ref=e44]
+          - paragraph
+            - StaticText "批量制作课堂教辅图"
+          - paragraph
+            - StaticText "结合知识库和参考风格，生成多比例教学素材。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 09 1 积分 / 次 AI备课器 从教材资料生成完整教案 组织目标、学情、活动、评价与作业，形成可编辑备课方案。 进入工具 ↗" [ref=e19]
+          - StaticText "MODULE / 09"
+          - StaticText "1 积分 / 次"
+          - heading "AI备课器" [level=3, ref=e45]
+          - paragraph
+            - StaticText "从教材资料生成完整教案"
+          - paragraph
+            - StaticText "组织目标、学情、活动、评价与作业，形成可编辑备课方案。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 24 1 积分 / 次 课文预习单 把教材资料整理成可直接使用的课文预习单 上传教材、试卷或作业，提炼知识地图、重点难点与课前学习任务。 进入工具 ↗" [ref=e20]
+          - StaticText "MODULE / 24"
+          - StaticText "1 积分 / 次"
+          - heading "课文预习单" [level=3, ref=e46]
+          - paragraph
+            - StaticText "把教材资料整理成可直接使用的课文预习单"
+          - paragraph
+            - StaticText "上传教材、试卷或作业，提炼知识地图、重点难点与课前学习任务。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 25 1 积分 / 次 课堂笔记生成器 把课堂资料整理成结构清晰的复习笔记 汇总教材、板书、试卷和作业，生成可复习、可打印的课堂笔记。 进入工具 ↗" [ref=e21]
+          - StaticText "MODULE / 25"
+          - StaticText "1 积分 / 次"
+          - heading "课堂笔记生成器" [level=3, ref=e47]
+          - paragraph
+            - StaticText "把课堂资料整理成结构清晰的复习笔记"
+          - paragraph
+            - StaticText "汇总教材、板书、试卷和作业，生成可复习、可打印的课堂笔记。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 26 1 积分 / 批次 智批作业机 整班作业一次批完 批量上传学生作业，自动识别得分、评分说明并按批次归档。 进入工具 ↗" [ref=e22]
+          - StaticText "MODULE / 26"
+          - StaticText "1 积分 / 批次"
+          - heading "智批作业机" [level=3, ref=e48]
+          - paragraph
+            - StaticText "整班作业一次批完"
+          - paragraph
+            - StaticText "批量上传学生作业，自动识别得分、评分说明并按批次归档。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+      - generic
+        - paragraph
+          - StaticText "WORKBENCH / 02"
+        - heading "AI赋能教学提分" [level=2, ref=e23]
+        - paragraph
+          - StaticText "围绕审题、解题、得分与错因，建立教学提分闭环。"
+        - link "MODULE / 17 1 积分 / 次 AI审题器 把题目条件拆成可执行步骤 提取任务词、限制条件、关键数据和隐藏条件，减少审题漏项。 进入工具 ↗" [ref=e24]
+          - StaticText "MODULE / 17"
+          - StaticText "1 积分 / 次"
+          - heading "AI审题器" [level=3, ref=e49]
+          - paragraph
+            - StaticText "把题目条件拆成可执行步骤"
+          - paragraph
+            - StaticText "提取任务词、限制条件、关键数据和隐藏条件，减少审题漏项。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 18 1 积分 / 次 AI解题步骤器 用步骤支架带着学生解题 将题目拆成连续提示与检查点，帮助学生形成稳定解题路径。 进入工具 ↗" [ref=e25]
+          - StaticText "MODULE / 18"
+          - StaticText "1 积分 / 次"
+          - heading "AI解题步骤器" [level=3, ref=e50]
+          - paragraph
+            - StaticText "用步骤支架带着学生解题"
+          - paragraph
+            - StaticText "将题目拆成连续提示与检查点，帮助学生形成稳定解题路径。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 19 1 积分 / 次 AI得分点拆解器 把评分标准拆成可检查得分点 逐项比对学生答案与评分要求，明确已得分、失分和补强动作。 进入工具 ↗" [ref=e26]
+          - StaticText "MODULE / 19"
+          - StaticText "1 积分 / 次"
+          - heading "AI得分点拆解器" [level=3, ref=e51]
+          - paragraph
+            - StaticText "把评分标准拆成可检查得分点"
+          - paragraph
+            - StaticText "逐项比对学生答案与评分要求，明确已得分、失分和补强动作。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 20 1 积分 / 次 AI错因判断器 区分知识、方法与审题错误 从学生答案和题目证据判断错因类型，并给出针对性修正建议。 进入工具 ↗" [ref=e27]
+          - StaticText "MODULE / 20"
+          - StaticText "1 积分 / 次"
+          - heading "AI错因判断器" [level=3, ref=e52]
+          - paragraph
+            - StaticText "区分知识、方法与审题错误"
+          - paragraph
+            - StaticText "从学生答案和题目证据判断错因类型，并给出针对性修正建议。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 21 1 积分 / 次 题感训练提分器 在连续选择与反馈中形成题感 围绕知识点训练判断、方法选择和陷阱识别，沉淀稳定题感。 进入工具 ↗" [ref=e28]
+          - StaticText "MODULE / 21"
+          - StaticText "1 积分 / 次"
+          - heading "题感训练提分器" [level=3, ref=e53]
+          - paragraph
+            - StaticText "在连续选择与反馈中形成题感"
+          - paragraph
+            - StaticText "围绕知识点训练判断、方法选择和陷阱识别，沉淀稳定题感。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 07 1 积分 / 次 错题举一反三 从一道错题扩展一组训练 识别错因并生成同源、变式与迁移练习。 进入工具 ↗" [ref=e29]
+          - StaticText "MODULE / 07"
+          - StaticText "1 积分 / 次"
+          - heading "错题举一反三" [level=3, ref=e54]
+          - paragraph
+            - StaticText "从一道错题扩展一组训练"
+          - paragraph
+            - StaticText "识别错因并生成同源、变式与迁移练习。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 02 1 积分 / 次 卷后提分试卷分析 从一次考试找到下次增分点 识别卷面证据，形成提分优先级与七天行动计划。 进入工具 ↗" [ref=e30]
+          - StaticText "MODULE / 02"
+          - StaticText "1 积分 / 次"
+          - heading "卷后提分试卷分析" [level=3, ref=e55]
+          - paragraph
+            - StaticText "从一次考试找到下次增分点"
+          - paragraph
+            - StaticText "识别卷面证据，形成提分优先级与七天行动计划。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+      - generic
+        - paragraph
+          - StaticText "WORKBENCH / 03"
+        - heading "AI赋能教培招生" [level=2, ref=e31]
+        - paragraph
+          - StaticText "把评测、诊断和行动计划沉淀为可展示的提分服务。"
+        - link "MODULE / 10 1 积分 / 次 AI提分空间评测器 测出最值得投入的提分空间 结合成绩、试卷和学习表现，生成提分空间评测报告。 进入工具 ↗" [ref=e32]
+          - StaticText "MODULE / 10"
+          - StaticText "1 积分 / 次"
+          - heading "AI提分空间评测器" [level=3, ref=e56]
+          - paragraph
+            - StaticText "测出最值得投入的提分空间"
+          - paragraph
+            - StaticText "结合成绩、试卷和学习表现，生成提分空间评测报告。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 11 1 积分 / 次 AI丢分诊断器 定位每一次丢分的真正原因 从试卷、作业和错题材料中识别丢分模式与修复方向。 进入工具 ↗" [ref=e33]
+          - StaticText "MODULE / 11"
+          - StaticText "1 积分 / 次"
+          - heading "AI丢分诊断器" [level=3, ref=e57]
+          - paragraph
+            - StaticText "定位每一次丢分的真正原因"
+          - paragraph
+            - StaticText "从试卷、作业和错题材料中识别丢分模式与修复方向。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 12 1 积分 / 次 错题归因追分器 把错题归因转成可追踪增分路径 分析错题、知识点与学习阶段，生成可执行的追分方案。 进入工具 ↗" [ref=e34]
+          - StaticText "MODULE / 12"
+          - StaticText "1 积分 / 次"
+          - heading "错题归因追分器" [level=3, ref=e58]
+          - paragraph
+            - StaticText "把错题归因转成可追踪增分路径"
+          - paragraph
+            - StaticText "分析错题、知识点与学习阶段，生成可执行的追分方案。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 13 1 积分 / 次 知识查缺补漏器 绘制知识缺口与补漏地图 从试卷和知识点材料定位薄弱环节，安排补漏优先级。 进入工具 ↗" [ref=e35]
+          - StaticText "MODULE / 13"
+          - StaticText "1 积分 / 次"
+          - heading "知识查缺补漏器" [level=3, ref=e59]
+          - paragraph
+            - StaticText "绘制知识缺口与补漏地图"
+          - paragraph
+            - StaticText "从试卷和知识点材料定位薄弱环节，安排补漏优先级。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 14 1 积分 / 次 考前抢分清单器 把考前时间换成确定得分点 基于试卷表现生成考前复习清单、风险控制和时间安排。 进入工具 ↗" [ref=e36]
+          - StaticText "MODULE / 14"
+          - StaticText "1 积分 / 次"
+          - heading "考前抢分清单器" [level=3, ref=e60]
+          - paragraph
+            - StaticText "把考前时间换成确定得分点"
+          - paragraph
+            - StaticText "基于试卷表现生成考前复习清单、风险控制和时间安排。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 15 1 积分 / 次 AI题型提分卡 一张卡看懂题型与得分路径 从题目材料提炼题型特征、解题策略、易错点和后续训练。 进入工具 ↗" [ref=e37]
+          - StaticText "MODULE / 15"
+          - StaticText "1 积分 / 次"
+          - heading "AI题型提分卡" [level=3, ref=e61]
+          - paragraph
+            - StaticText "一张卡看懂题型与得分路径"
+          - paragraph
+            - StaticText "从题目材料提炼题型特征、解题策略、易错点和后续训练。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+        - link "MODULE / 16 1 积分 / 次 提分行动计划器 把目标分拆成每天的行动 依据当前水平、目标分和可用时间生成阶段化提分计划。 进入工具 ↗" [ref=e38]
+          - StaticText "MODULE / 16"
+          - StaticText "1 积分 / 次"
+          - heading "提分行动计划器" [level=3, ref=e62]
+          - paragraph
+            - StaticText "把目标分拆成每天的行动"
+          - paragraph
+            - StaticText "依据当前水平、目标分和可用时间生成阶段化提分计划。"
+          - StaticText "进入工具"
+          - StaticText "↗"
+- contentinfo
+  - link "教师AI赋能站 让教师把时间留给判断与创造" [ref=e5]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "让教师把时间留给判断与创造"
+  - paragraph
+    - StaticText "© 2026 教师AI赋能站"

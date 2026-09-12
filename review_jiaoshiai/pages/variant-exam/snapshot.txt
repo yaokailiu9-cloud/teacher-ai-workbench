@@ -1,0 +1,46 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- generic
+  - heading "试卷变式机" [level=1, ref=e5]
+  - paragraph
+    - StaticText "UPLOAD EXAM · GENERATE VARIANTS"
+  - StaticText "上传试卷"
+  - LabelText [ref=e6] clickable [cursor:pointer]
+    - StaticText "+"
+    - StaticText "上传完整试卷"
+    - StaticText "支持 JPG、PNG、PDF、Word，可多选或拖拽，数量不限"
+  - button "+ 上传完整试卷 支持 JPG、PNG、PDF、Word，可多选或拖拽，数量不限" [ref=e7]: 未选择任何文件
+  - StaticText "尚未选择文件"
+  - generic "变式生成设置"
+    - StaticText "变式设置"
+    - LabelText
+      - StaticText "变式难度"
+    - strong
+      - StaticText "8"
+    - StaticText "级"
+    - slider "变式难度" [ref=e9]: 8
+    - StaticText "1-10级逐级拉开，3级超简单，6级日常，8级中高考，10级奥林匹克"
+    - LabelText
+      - StaticText "变式系数"
+    - strong
+      - StaticText "1"
+    - StaticText "级"
+    - slider "变式系数" [ref=e10]: 1
+    - generic
+      - StaticText "变式系数越大，题目变式变化程度就越大，默认1级"
+    - LabelText
+      - StaticText "要求备注"
+    - textbox "要求备注" [ref=e11]
+  - checkbox "显示答案和解析" [checked=false, ref=e12]
+  - button "生成变式试卷" [disabled, ref=e8]
+    - StaticText "生成变式试卷"
+- StaticText "等待上传试卷"
+- StaticText "上传完整原卷后即可开始生成。"

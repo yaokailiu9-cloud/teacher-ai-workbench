@@ -1,0 +1,53 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- generic
+  - heading "错题举一反三" [level=1, ref=e5]
+  - paragraph
+    - StaticText "WRONG QUESTION PRACTICE"
+  - StaticText "上传错题"
+  - StaticText "只可以上传1道错题，定制化专练。"
+  - button "选择文件" [ref=e6]: 未选择任何文件
+  - StaticText "支持格式：PNG/JPG/PDF"
+  - StaticText "出题配置"
+  - LabelText
+    - StaticText "题型选择"
+  - generic
+    - generic [ref=e13] clickable [cursor:pointer, onclick]
+      - StaticText "相似题"
+    - generic [ref=e14] clickable [cursor:pointer, onclick]
+      - StaticText "变式题"
+    - generic [ref=e15] clickable [cursor:pointer, onclick]
+      - StaticText "综合应用题"
+  - LabelText
+    - StaticText "题目数量"
+  - StaticText "相似题"
+  - combobox [expanded=false, ref=e7]: 1题
+    - MenuListPopup
+      - option "1题" [selected, ref=e16]
+      - option "2题" [ref=e17]
+      - option "3题" [ref=e18]
+  - StaticText "变式题"
+  - combobox [expanded=false, ref=e8]: 1题
+    - MenuListPopup
+      - option "1题" [selected, ref=e19]
+      - option "2题" [ref=e20]
+      - option "3题" [ref=e21]
+  - StaticText "综合应用题"
+  - combobox [expanded=false, ref=e9]: 1题
+    - MenuListPopup
+      - option "1题" [selected, ref=e22]
+      - option "2题" [ref=e23]
+      - option "3题" [ref=e24]
+  - checkbox "是否显示原题" [checked=true, ref=e10]
+  - checkbox "显示答案和解析" [checked=true, ref=e11]
+  - button "⚡ 生成题目" [ref=e12]
+    - StaticText "⚡ 生成题目"
+- StaticText "请先上传1道错题，再点击\"生成题目\""

@@ -1,0 +1,62 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e2]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e3]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e4]
+  - button "123321" [ref=e5]
+- generic [ref=e1] clickable [onclick]
+  - main
+    - complementary
+      - heading "AI解题步骤" [level=1, ref=e6]
+      - paragraph
+        - StaticText "从分步理解到完整规范作答"
+      - form
+        - LabelText
+          - StaticText "学科"
+        - combobox "学科" [expanded=false, ref=e8]: 自动识别
+          - MenuListPopup
+            - option "自动识别" [selected, ref=e14]
+            - option "数学" [ref=e15]
+            - option "语文" [ref=e16]
+            - option "英语" [ref=e17]
+            - option "物理" [ref=e18]
+            - option "化学" [ref=e19]
+            - option "生物" [ref=e20]
+            - option "历史" [ref=e21]
+            - option "地理" [ref=e22]
+            - option "政治" [ref=e23]
+            - option "其他" [ref=e24]
+        - LabelText
+          - StaticText "年级"
+        - combobox "年级" [expanded=false, ref=e9]: 自动识别
+          - MenuListPopup
+            - option "自动识别" [selected, ref=e25]
+            - option "一年级" [ref=e26]
+            - option "二年级" [ref=e27]
+            - option "三年级" [ref=e28]
+            - option "四年级" [ref=e29]
+            - option "五年级" [ref=e30]
+            - option "六年级" [ref=e31]
+            - option "初一" [ref=e32]
+            - option "初二" [ref=e33]
+            - option "初三" [ref=e34]
+            - option "高一" [ref=e35]
+            - option "高二" [ref=e36]
+            - option "高三" [ref=e37]
+        - StaticText "上传题目"
+        - button "选择文件" [ref=e10]: 未选择任何文件
+        - button "点击或拖拽文件到此处 PDF / DOCX / PNG / JPG" [ref=e11]
+          - StaticText "点击或拖拽文件到此处"
+          - StaticText "PDF / DOCX / PNG / JPG"
+        - button "生成分步引导" [ref=e12]
+          - StaticText "生成分步引导"
+    - generic
+      - sectionheader
+        - heading "分步解题路径" [level=2, ref=e13]
+      - heading "等待生成解题路径" [level=3, ref=e7]
+      - paragraph
+        - StaticText "上传一道题目，AI 将生成四步解题路径和完整答案。"

@@ -1,0 +1,178 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- banner
+  - heading "孩子丢分CT诊断" [level=1, ref=e5]
+  - paragraph
+    - StaticText "基于学业表现的丢分原因深度分析"
+  - StaticText "数据安全保护中"
+- main
+  - region "填写信息并上传" [ref=e6]
+    - heading "填写信息并上传" [level=2, ref=e8]
+    - form
+      - LabelText
+        - StaticText "学生年级"
+        - combobox "学生年级" [expanded=false, ref=e13]: 初二
+          - MenuListPopup
+            - option "初一" [ref=e22]
+            - option "初二" [selected, ref=e23]
+            - option "初三" [ref=e24]
+            - option "高一" [ref=e25]
+            - option "高二" [ref=e26]
+            - option "高三" [ref=e27]
+            - option "小学高年级" [ref=e28]
+      - LabelText
+        - StaticText "科目"
+        - combobox "科目" [expanded=false, ref=e14]: 数学
+          - MenuListPopup
+            - option "数学" [selected, ref=e29]
+            - option "语文" [ref=e30]
+            - option "英语" [ref=e31]
+            - option "物理" [ref=e32]
+            - option "化学" [ref=e33]
+            - option "生物" [ref=e34]
+            - option "历史" [ref=e35]
+            - option "地理" [ref=e36]
+            - option "政治" [ref=e37]
+      - LabelText
+        - StaticText "考试/作业类型"
+        - combobox "考试/作业类型" [expanded=false, ref=e15]: 期中考试
+          - MenuListPopup
+            - option "期中考试" [selected, ref=e38]
+            - option "期末考试" [ref=e39]
+            - option "月考" [ref=e40]
+            - option "周测" [ref=e41]
+            - option "单元测试" [ref=e42]
+            - option "日常作业" [ref=e43]
+            - option "错题整理" [ref=e44]
+      - generic
+        - StaticText "上传试卷或作业文件"
+        - LabelText [ref=e16] focusable [tabindex]
+          - button "点击或拖拽文件到此处上传 支持批量上传 PDF、Word、PNG、JPG 文件数量不限，单个不超过 50MB" [ref=e21]: 未选择任何文件
+          - strong
+            - StaticText "点击或拖拽文件到此处上传"
+          - generic
+            - StaticText "支持批量上传 PDF、Word、PNG、JPG"
+            - LineBreak "\n"
+            - StaticText "文件数量不限，单个不超过 50MB"
+      - LabelText
+        - StaticText "补充说明 "
+        - emphasis
+          - StaticText "（可选）"
+        - textbox "补充说明 （可选） 0/200" [ref=e17]
+        - generic
+          - StaticText "0"
+          - StaticText "/200"
+      - button "生成丢分诊断" [ref=e9]
+        - StaticText "生成丢分诊断"
+      - StaticText "保护隐私，文件仅用于本次诊断分析"
+  - region "丢分诊断分析报告" [ref=e7]
+    - generic "下载诊断报告"
+      - button "下载 PDF" [ref=e10]
+        - StaticText "下载 PDF"
+      - button "下载 Word" [ref=e11]
+        - StaticText "下载 Word"
+    - generic
+      - sectionheader
+        - heading "丢分诊断分析报告" [level=2, ref=e18]
+        - paragraph
+          - StaticText "学科："
+          - StaticText "数学"
+          - StaticText " 年级："
+          - StaticText "初二"
+          - StaticText " 类型："
+          - StaticText "期中考试"
+          - StaticText " 生成时间："
+          - StaticText "2024-05-20 14:32"
+      - status
+      - article
+        - heading "五类丢分维度对比" [level=3, ref=e19]
+        - Canvas "五类丢分维度雷达图"
+      - article
+        - StaticText "丢分维度"
+        - StaticText "丢分占比"
+        - StaticText "严重程度"
+        - StaticText "优先处理建议"
+        - generic
+          - StaticText "知识丢分"
+          - StaticText "32%"
+          - StaticText "严重"
+          - StaticText "优先处理"
+          - StaticText "方法丢分"
+          - StaticText "20%"
+          - StaticText "较重"
+          - StaticText "优先处理"
+          - StaticText "审题丢分"
+          - StaticText "18%"
+          - StaticText "中等"
+          - StaticText "及时处理"
+          - StaticText "计算/表达丢分"
+          - StaticText "20%"
+          - StaticText "较重"
+          - StaticText "优先处理"
+          - StaticText "习惯丢分"
+          - StaticText "10%"
+          - StaticText "较轻"
+          - StaticText "持续优化"
+      - article
+        - heading "主要失分点分析（TOP 5）" [level=3, ref=e20]
+        - table
+          - rowgroup
+            - row
+              - columnheader "序号" [ref=e45]
+              - columnheader "失分点" [ref=e46]
+              - columnheader "对应题号" [ref=e47]
+              - columnheader "丢分原因归类" [ref=e48]
+              - columnheader "丢分占比" [ref=e49]
+              - columnheader "严重程度" [ref=e50]
+              - columnheader "优先处理建议" [ref=e51]
+          - rowgroup
+            - row
+              - cell "1" [ref=e52]
+              - cell "一次函数图像与性质理解不准确" [ref=e53]
+              - cell "第15题(1)" [ref=e54]
+              - cell "知识丢分" [ref=e55]
+              - cell "12%" [ref=e56]
+              - cell "严重" [ref=e57]
+              - cell "优先处理" [ref=e58]
+            - row
+              - cell "2" [ref=e59]
+              - cell "二次函数最值问题方法选择错误" [ref=e60]
+              - cell "第21题" [ref=e61]
+              - cell "方法丢分" [ref=e62]
+              - cell "8%" [ref=e63]
+              - cell "较重" [ref=e64]
+              - cell "优先处理" [ref=e65]
+            - row
+              - cell "3" [ref=e66]
+              - cell "几何证明题条件理解不完整" [ref=e67]
+              - cell "第18题(2)" [ref=e68]
+              - cell "审题丢分" [ref=e69]
+              - cell "7%" [ref=e70]
+              - cell "较重" [ref=e71]
+              - cell "优先处理" [ref=e72]
+            - row
+              - cell "4" [ref=e73]
+              - cell "计算过程出错（符号、运算顺序）" [ref=e74]
+              - cell "第6题，第13题" [ref=e75]
+              - cell "计算/表达丢分" [ref=e76]
+              - cell "6%" [ref=e77]
+              - cell "中等" [ref=e78]
+              - cell "及时处理" [ref=e79]
+            - row
+              - cell "5" [ref=e80]
+              - cell "单位填写不规范，答案未化简" [ref=e81]
+              - cell "第9题，第20题" [ref=e82]
+              - cell "习惯丢分" [ref=e83]
+              - cell "4%" [ref=e84]
+              - cell "较轻" [ref=e85]
+              - cell "持续优化" [ref=e86]
+    - button "查看完整报告" [ref=e12]
+      - StaticText "查看完整报告"

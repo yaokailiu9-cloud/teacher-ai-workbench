@@ -1,0 +1,140 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- main
+  - complementary "AI得分点拆解"
+    - link "打开 AI 配置" [ref=e6]
+    - sectionheader
+      - heading "AI得分点拆解" [level=1, ref=e9]
+      - paragraph
+        - StaticText "看清每一分怎么拿"
+    - form
+      - LabelText [ref=e10] clickable [cursor:pointer]
+        - StaticText "学科"
+      - combobox "选择学科" [expanded=false, ref=e21]: 高中语文
+        - MenuListPopup
+          - group "小学"
+            - option "小学语文" [ref=e29]
+            - option "小学数学" [ref=e30]
+            - option "小学英语" [ref=e31]
+          - group "初中"
+            - option "初中语文" [ref=e32]
+            - option "初中数学" [ref=e33]
+            - option "初中英语" [ref=e34]
+            - option "初中物理" [ref=e35]
+            - option "初中化学" [ref=e36]
+            - option "初中历史" [ref=e37]
+            - option "初中道德与法治" [ref=e38]
+            - option "初中地理" [ref=e39]
+            - option "初中生物" [ref=e40]
+          - group "高中"
+            - option "高中语文" [selected, ref=e41]
+            - option "高中数学" [ref=e42]
+            - option "高中英语" [ref=e43]
+            - option "高中物理" [ref=e44]
+            - option "高中化学" [ref=e45]
+            - option "高中历史" [ref=e46]
+            - option "高中思想政治" [ref=e47]
+            - option "高中地理" [ref=e48]
+            - option "高中生物" [ref=e49]
+      - LabelText [ref=e11] clickable [cursor:pointer]
+        - StaticText "题目总分"
+      - spinbutton "题目总分" [ref=e22]: 12
+        - StaticText "12"
+      - LabelText [ref=e12] clickable [cursor:pointer]
+        - StaticText "上传题目"
+      - LabelText [ref=e13] clickable [cursor:pointer, tabindex]
+        - StaticText "点击或拖拽文件到此处上传"
+        - StaticText "PDF / Word / PNG / JPG"
+      - LabelText [ref=e14] clickable [cursor:pointer]
+        - StaticText "学生答案（可选）"
+      - LabelText [ref=e15] clickable [cursor:pointer, tabindex]
+        - StaticText "点击或拖拽文件到此处上传"
+        - StaticText "PDF / Word / PNG / JPG"
+      - button "拆解得分点" [ref=e16]
+  - region "得分点报告" [ref=e5]
+    - heading "得分点报告" [level=2, ref=e7]
+    - generic "下载完整报告"
+      - button "下载 PDF" [disabled, ref=e17]
+        - StaticText "下载 PDF"
+      - button "下载 Word" [disabled, ref=e18]
+        - StaticText "下载 Word"
+    - article
+      - heading "题目预览" [level=3, ref=e19]
+      - paragraph
+        - StaticText "阅读下面的文言文，完成后面的问题。（12分）\n臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。\n先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，\n由是感激，遂许先帝以驱驰。\n　　　　　　　　—— 诸葛亮《出师表》节选\n\n题目：结合选文内容，分析诸葛亮“感激先帝”的原因。（12分）"
+    - generic "总分概览"
+      - strong
+        - StaticText "8"
+      - StaticText "/"
+      - StaticText "12 分"
+      - StaticText "已获得"
+      - strong
+        - StaticText "8"
+        - StaticText "分"
+      - StaticText "待补充"
+      - strong
+        - StaticText "4"
+        - StaticText "分"
+    - region "评分诊断" [ref=e8]
+      - StaticText "六维阅卷"
+      - heading "评分诊断" [level=3, ref=e20]
+      - paragraph
+        - StaticText "依据题目与作答逐项分析"
+      - list "六维评分诊断"
+        - listitem [level=1]
+          - button "答题对象，已掌握" [expanded=false, ref=e23]
+            - StaticText "01"
+            - strong
+              - StaticText "答题对象"
+            - StaticText "1 分"
+            - StaticText "已掌握"
+        - listitem [level=1]
+          - button "核心结论，已掌握" [expanded=false, ref=e24]
+            - StaticText "02"
+            - strong
+              - StaticText "核心结论"
+            - StaticText "2 分"
+            - StaticText "已掌握"
+        - listitem [level=1]
+          - button "关键依据，有待补全" [expanded=false, ref=e25]
+            - StaticText "03"
+            - strong
+              - StaticText "关键依据"
+            - StaticText "3 分"
+            - StaticText "有待补全"
+        - listitem [level=1]
+          - button "推理步骤，已掌握" [expanded=false, ref=e26]
+            - StaticText "04"
+            - strong
+              - StaticText "推理步骤"
+            - StaticText "3 分"
+            - StaticText "已掌握"
+        - listitem [level=1]
+          - button "关键词，需要完善" [expanded=false, ref=e27]
+            - StaticText "05"
+            - strong
+              - StaticText "关键词"
+            - StaticText "2 分"
+            - StaticText "需要完善"
+        - listitem [level=1]
+          - button "格式要求，书写规范" [expanded=false, ref=e28]
+            - StaticText "06"
+            - strong
+              - StaticText "格式要求"
+            - StaticText "1 分"
+            - StaticText "书写规范"
+    - strong
+      - StaticText "修改建议："
+    - paragraph
+      - StaticText "补充关键依据，并写清推理过程"
+    - paragraph
+      - StaticText "AI评分结果需教师复核"
+- status

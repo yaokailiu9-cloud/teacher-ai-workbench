@@ -1,0 +1,105 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e2]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e3]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e4]
+  - button "123321" [ref=e5]
+- generic [ref=e1] clickable [onclick]
+  - generic
+    - banner
+      - generic "课萃课堂笔记生成器"
+        - StaticText "课萃"
+        - StaticText "课堂笔记"
+      - StaticText "专业整理 · 保留原始知识依据"
+    - main
+      - generic
+        - paragraph
+          - StaticText "K12 课堂资料整理"
+        - heading "把一桌散资料， 整理成一份好笔记。" [level=1, ref=e6]
+          - StaticText "把一桌散资料，"
+          - LineBreak "\n"
+          - StaticText "整理成一份好笔记。"
+        - paragraph
+          - StaticText "教材、板书、试卷、作业和题目一起上传，自动提炼重点、例题与易错点。"
+      - generic
+        - generic
+          - button "拖放课堂资料到这里 或点击选择文件" [ref=e7]
+            - image
+            - strong
+              - StaticText "拖放课堂资料到这里"
+            - StaticText "或点击选择文件"
+          - StaticText "PDF"
+          - StaticText "WORD"
+          - StaticText "JPG"
+          - StaticText "PNG"
+          - paragraph
+            - StaticText "应用不限制文件数量和大小"
+        - generic
+          - StaticText "整理要求"
+          - paragraph
+            - StaticText "帮助内容更贴合课堂阶段"
+          - LabelText
+            - StaticText "年级 / 学段"
+            - combobox "年级 / 学段" [expanded=false, ref=e9]: 初二
+              - MenuListPopup
+                - option "小学低年级" [ref=e18]
+                - option "小学高年级" [ref=e19]
+                - option "初一" [ref=e20]
+                - option "初二" [selected, ref=e21]
+                - option "初三" [ref=e22]
+                - option "高一" [ref=e23]
+                - option "高二" [ref=e24]
+                - option "高三" [ref=e25]
+            - image
+          - LabelText
+            - StaticText "学科"
+            - combobox "学科" [expanded=false, ref=e10]: 数学
+              - MenuListPopup
+                - option "语文" [ref=e26]
+                - option "数学" [selected, ref=e27]
+                - option "英语" [ref=e28]
+                - option "物理" [ref=e29]
+                - option "化学" [ref=e30]
+                - option "生物" [ref=e31]
+                - option "道德与法治" [ref=e32]
+                - option "历史" [ref=e33]
+                - option "地理" [ref=e34]
+                - option "科学" [ref=e35]
+                - option "其他" [ref=e36]
+            - image
+          - group "笔记侧重"
+            - Legend
+              - StaticText "笔记侧重"
+            - LabelText [ref=e11] clickable [cursor:pointer]
+              - radio "系统精讲 概念、例题与易错点完整展开" [checked=true, ref=e15]
+              - image
+              - strong
+                - StaticText "系统精讲"
+              - StaticText "概念、例题与易错点完整展开"
+            - LabelText [ref=e12] clickable [cursor:pointer]
+              - radio "复习提纲 知识网络清晰，方便快速回顾" [checked=false, ref=e16]
+              - strong
+                - StaticText "复习提纲"
+              - StaticText "知识网络清晰，方便快速回顾"
+            - LabelText [ref=e13] clickable [cursor:pointer]
+              - radio "应试突破 突出题型、步骤与得分要点" [checked=false, ref=e17]
+              - strong
+                - StaticText "应试突破"
+              - StaticText "突出题型、步骤与得分要点"
+          - LabelText
+            - StaticText "额外重点 选填"
+            - textbox "额外重点 选填" [ref=e14]
+          - button "开始生成课堂笔记" [ref=e8]
+            - image
+            - StaticText "开始生成课堂笔记"
+            - image
+          - image
+          - StaticText "处理完成后自动清理原始上传文件"
+    - contentinfo
+      - StaticText "课萃 CLASSNOTE"
+      - paragraph
+        - StaticText "让每一份课堂资料，都成为清晰的复习路径。"

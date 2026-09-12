@@ -1,0 +1,63 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- generic
+  - banner
+    - heading "错题归因追分器" [level=1, ref=e5]
+    - paragraph
+      - StaticText "一题一包 · 精准追击 · 直击错因"
+  - main
+    - generic
+      - heading "输入错题信息" [level=2, ref=e6]
+      - LabelText
+        - StaticText "年级"
+        - combobox "年级" [expanded=false, ref=e10]: 请选择年级
+          - MenuListPopup
+            - option "请选择年级" [selected, ref=e13]
+            - option "小学三年级" [ref=e14]
+            - option "小学四年级" [ref=e15]
+            - option "小学五年级" [ref=e16]
+            - option "小学六年级" [ref=e17]
+            - option "七年级" [ref=e18]
+            - option "八年级" [ref=e19]
+            - option "九年级" [ref=e20]
+            - option "高一" [ref=e21]
+            - option "高二" [ref=e22]
+            - option "高三" [ref=e23]
+      - LabelText
+        - StaticText "科目"
+        - combobox "科目" [expanded=false, ref=e11]: 请选择科目
+          - MenuListPopup
+            - option "请选择科目" [selected, ref=e24]
+            - option "语文" [ref=e25]
+            - option "数学" [ref=e26]
+            - option "英语" [ref=e27]
+            - option "物理" [ref=e28]
+            - option "化学" [ref=e29]
+            - option "生物" [ref=e30]
+            - option "历史" [ref=e31]
+            - option "地理" [ref=e32]
+            - option "政治" [ref=e33]
+      - LabelText [ref=e7] clickable [cursor:pointer]
+        - button "上传错题 点击或拖拽文件到此区域上传 支持格式： PDF / WORD / PNG / JPG" [ref=e12]: 未选择任何文件
+        - strong
+          - StaticText "上传错题"
+        - StaticText "点击或拖拽文件到此区域上传"
+        - generic
+          - StaticText "支持格式： PDF / WORD / PNG / JPG"
+      - StaticText "文件仅用于生成归因追分结果，安全加密，保护隐私"
+      - button "生成归因追分结果" [ref=e8]
+      - StaticText "文件仅用于生成归因追分结果，安全加密，保护隐私"
+    - generic
+      - heading "归因追分结果" [level=2, ref=e9]
+      - StaticText "✓"
+      - strong
+        - StaticText "先上传 1 道错题"
+      - StaticText "AI 会自动拆解考点、判断错因，并生成三类训练矩阵。"

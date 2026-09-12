@@ -1,0 +1,651 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e2]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e3]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e4]
+  - button "123321" [ref=e5]
+- generic [ref=e1] clickable [onclick]
+  - main
+    - complementary
+      - heading "教师备课器" [level=1, ref=e6]
+      - StaticText "从教学目标开始，生成一堂可执行的课"
+      - StaticText "AI智能备课"
+      - heading "基础信息" [level=2, ref=e7]
+      - LabelText
+        - StaticText "年级与科目"
+        - combobox "年级与科目 请选择科目" [expanded=false, ref=e9]: 请选择年级
+          - MenuListPopup
+            - option "请选择年级" [selected, ref=e35]
+            - option "一年级" [ref=e36]
+            - option "二年级" [ref=e37]
+            - option "三年级" [ref=e38]
+            - option "四年级" [ref=e39]
+            - option "五年级" [ref=e40]
+            - option "六年级" [ref=e41]
+            - option "七年级" [ref=e42]
+            - option "八年级" [ref=e43]
+            - option "九年级" [ref=e44]
+            - option "高一" [ref=e45]
+            - option "高二" [ref=e46]
+            - option "高三" [ref=e47]
+        - combobox [expanded=false, ref=e10]: 请选择科目
+          - MenuListPopup
+            - option "请选择科目" [selected, ref=e48]
+            - option "语文" [ref=e49]
+            - option "数学" [ref=e50]
+            - option "英语" [ref=e51]
+            - option "物理" [ref=e52]
+            - option "化学" [ref=e53]
+            - option "生物" [ref=e54]
+            - option "历史" [ref=e55]
+            - option "地理" [ref=e56]
+            - option "道法" [ref=e57]
+            - option "科学" [ref=e58]
+            - option "信息科技" [ref=e59]
+      - LabelText
+        - StaticText "课题"
+        - textbox "课题" [ref=e11]
+      - LabelText
+        - StaticText "课时"
+        - combobox "课时" [expanded=false, ref=e12]: 第1课时
+          - MenuListPopup
+            - option "第1课时" [selected, ref=e60]
+            - option "第2课时" [ref=e61]
+            - option "单元复习课" [ref=e62]
+            - option "试卷讲评课" [ref=e63]
+      - LabelText
+        - StaticText "学生基础"
+        - textbox "学生基础" [ref=e13]
+      - LabelText
+        - StaticText "学习目标"
+        - textbox "学习目标" [ref=e14]
+      - group
+        - DisclosureTriangle "＋ 更多教学要求 未选择" [expanded=false]
+          - StaticText "＋"
+          - StaticText "更多教学要求"
+          - StaticText "未选择"
+      - LabelText
+        - StaticText "上传教材或教辅"
+        - generic [ref=e15] clickable [onclick]
+          - strong
+            - StaticText "点击或拖拽文件到此处上传"
+          - StaticText "PDF / WORD / PNG / JPG / TXT"
+      - StaticText "✓"
+      - strong
+        - StaticText "输入内容已就绪"
+      - StaticText "可以直接生成备课方案，也可以先上传教材"
+      - button "生成备课方案" [ref=e8]
+    - generic
+      - sectionheader
+        - StaticText "▤"
+        - paragraph
+          - StaticText "EDITABLE LESSON DOCUMENT"
+        - heading "备课教案" [level=1, ref=e16]
+        - StaticText "连续文档预览 · 可下载 Word / PDF"
+        - button "AI继续调整" [ref=e17]
+        - button "下载 Word" [ref=e18]
+        - button "下载 PDF" [ref=e19]
+        - button "复制方案" [ref=e20]
+      - article
+        - paragraph
+          - StaticText "教 师 备 课 教 案"
+        - heading "《春》第一课时备课方案" [level=1, ref=e21]
+        - paragraph
+          - StaticText "课标对齐 · 学情诊断 · 任务驱动 · 教学评一致"
+        - DescriptionList
+          - term "年级学科"
+          - definition
+          - term "课时安排"
+          - definition
+            - StaticText "第1课时 · 45分钟"
+          - term "教材章节"
+          - definition
+          - term "课堂方式"
+          - definition
+        - generic
+          - StaticText "01"
+          - heading "课程标准与课时定位" [level=2, ref=e22]
+          - generic
+            - StaticText "课标依据"
+            - paragraph
+              - StaticText "依据义务教育语文课程标准关于第四学段阅读与鉴赏的要求，组织朗读、梳理、品味与表达活动；具体课标条目需由教师结合教材版本复核。"
+          - generic
+            - StaticText "核心素养"
+            - paragraph
+              - StaticText "语言运用、思维能力、审美创造、文化自信"
+          - generic
+            - StaticText "单元定位"
+            - paragraph
+              - StaticText "本课位于写景抒情类文本学习单元，承担建立“抓景物—品语言—悟情感”阅读路径的任务。"
+          - generic
+            - StaticText "课时价值"
+            - paragraph
+              - StaticText "第一课时重点完成整体感知、结构梳理和典型语言品析，为后续深入理解写景方法与情感表达奠定基础。"
+        - generic
+          - StaticText "02"
+          - heading "学情诊断" [level=2, ref=e23]
+          - paragraph
+            - StaticText "七年级学生对春景有丰富生活经验，也能完成基础字词和内容概括，但赏析往往停留在感受层面，缺少“词句证据—表达效果—情感指向”的完整推理。教学需通过示范批注、同伴交流和分层支架，让学生形成可迁移的写景散文阅读方法。"
+          - generic
+            - StaticText "已有基础"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "能借助注释解决基础字词。"
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "有简单的写景文本阅读经验。"
+          - generic
+            - StaticText "学习障碍"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "赏析常停留在“生动形象”，缺少具体语言证据。"
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "容易割裂景物描写与作者情感。"
+          - generic
+            - StaticText "常见误区"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "认为指出修辞名称就是完成赏析。"
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "概括结构时容易按自然段机械切分。"
+          - generic
+            - StaticText "差异与支持"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "基础学生需要赏析句式支架，提升学生需要完成方法迁移和表达优化。"
+        - generic
+          - StaticText "03"
+          - heading "教学目标与达成证据" [level=2, ref=e24]
+          - generic
+            - StaticText "01"
+            - heading "概括文章结构与主要春景" [level=3, ref=e64]
+            - strong
+              - StaticText "学习证据"
+            - StaticText "结构图或三个小标题"
+            - strong
+              - StaticText "成功标准"
+            - StaticText "层次完整、顺序合理，能覆盖主要内容。"
+          - generic
+            - StaticText "02"
+            - heading "结合词句赏析语言" [level=3, ref=e65]
+            - strong
+              - StaticText "学习证据"
+            - StaticText "一则“证据—方法—效果—情感”批注"
+            - strong
+              - StaticText "成功标准"
+            - StaticText "引用准确，至少说清一种表达方法及其作用。"
+          - generic
+            - StaticText "03"
+            - heading "迁移写景方法完成表达" [level=3, ref=e66]
+            - strong
+              - StaticText "学习证据"
+            - StaticText "80 字春景片段"
+            - strong
+              - StaticText "成功标准"
+            - StaticText "至少使用一种课堂所学方法，描写具体且语句通顺。"
+        - generic
+          - StaticText "04"
+          - heading "教学重点、难点与突破" [level=2, ref=e25]
+          - paragraph
+            - StaticText "重点：品味多感官描写与修辞表达。"
+          - paragraph
+            - StaticText "难点：体会语言背后的情感，并迁移到自己的表达中。"
+          - StaticText "1"
+          - StaticText "用“写了什么—怎么写—产生什么效果—表达什么情感”四步批注支架化解赏析空泛。"
+          - StaticText "2"
+          - StaticText "采用教师示范、同伴共评、独立迁移的渐进任务，帮助学生把阅读方法转化为表达能力。"
+        - generic
+          - StaticText "05"
+          - heading "教学准备" [level=2, ref=e26]
+          - list
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "教师：准备课文朗读音频、春景图片与课堂任务单。"
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "学生：预习课文，圈画生字词和最有画面感的句子。"
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "资源：教材、学习单、投屏课件与随堂练习。"
+        - generic
+          - StaticText "06"
+          - heading "教学过程" [level=2, ref=e27]
+          - generic
+            - sectionheader
+              - StaticText "01"
+              - heading "诊断导入" [level=3, ref=e75]
+              - time
+                - StaticText "5 分钟"
+            - strong
+              - StaticText "任务目标"
+            - StaticText "激活生活经验并诊断观察表达水平。"
+            - strong
+              - StaticText "情境 / 任务"
+            - StaticText "以校园春景照片完成“我看见的春天”快速表达。"
+            - strong
+              - StaticText "教师活动"
+            - StaticText "展示春景照片，要求学生用具体词语描述并追问依据。"
+            - strong
+              - StaticText "学生活动"
+            - StaticText "独立观察后进行 20 秒口头表达，说明感官细节。"
+            - strong
+              - StaticText "学习产出"
+            - StaticText "一条包含具体景物和感官依据的口头表达。"
+            - strong
+              - StaticText "支架与分层"
+            - StaticText "提供“我看见/听见……，它让我感到……”句式。"
+            - strong
+              - StaticText "设计意图"
+            - StaticText "连接生活经验，为后续教学提供依据。"
+            - strong
+              - StaticText "观察与评价"
+            - StaticText "依据“具体景物+感官依据”快速判断。"
+          - generic
+            - sectionheader
+              - StaticText "02"
+              - heading "初读建构" [level=3, ref=e76]
+              - time
+                - StaticText "8 分钟"
+            - strong
+              - StaticText "任务目标"
+            - StaticText "扫清字词障碍并形成全文初步印象。"
+            - strong
+              - StaticText "情境 / 任务"
+            - StaticText "带着“文章写了一个怎样的春天”完成第一次阅读。"
+            - strong
+              - StaticText "教师活动"
+            - StaticText "范读关键段落，发布字词与整体感知任务。"
+            - strong
+              - StaticText "学生活动"
+            - StaticText "自由朗读，圈画疑难字词并用一句话概括感受。"
+            - strong
+              - StaticText "学习产出"
+            - StaticText "字词订正记录和一句话整体感受。"
+            - strong
+              - StaticText "支架与分层"
+            - StaticText "提供易错字音清单和感受词提示。"
+            - strong
+              - StaticText "设计意图"
+            - StaticText "先建立整体感受，再进入结构和语言分析。"
+            - strong
+              - StaticText "观察与评价"
+            - StaticText "检查字音、朗读流畅度及概括依据。"
+          - generic
+            - sectionheader
+              - StaticText "03"
+              - heading "梳理结构" [level=3, ref=e77]
+              - time
+                - StaticText "7 分钟"
+            - strong
+              - StaticText "任务目标"
+            - StaticText "建立“盼春—绘春—赞春”的篇章结构。"
+            - strong
+              - StaticText "情境 / 任务"
+            - StaticText "为文章制作一张快速理解的结构导图。"
+            - strong
+              - StaticText "教师活动"
+            - StaticText "组织比较分段结果，追问每部分的核心动作和顺序依据。"
+            - strong
+              - StaticText "学生活动"
+            - StaticText "默读分层，完成结构图并补写小标题。"
+            - strong
+              - StaticText "学习产出"
+            - StaticText "包含层次、小标题和顺序箭头的结构图。"
+            - strong
+              - StaticText "支架与分层"
+            - StaticText "提供“先写……再写……最后写……”框架。"
+            - strong
+              - StaticText "设计意图"
+            - StaticText "让篇章结构可视化，训练概括和关系推理。"
+            - strong
+              - StaticText "观察与评价"
+            - StaticText "依据“完整、准确、有顺序”互检。"
+          - generic
+            - sectionheader
+              - StaticText "04"
+              - heading "证据品析" [level=3, ref=e78]
+              - time
+                - StaticText "12 分钟"
+            - strong
+              - StaticText "任务目标"
+            - StaticText "形成基于语言证据的赏析方法。"
+            - strong
+              - StaticText "情境 / 任务"
+            - StaticText "为“最有春天气息的句子”制作推荐卡。"
+            - strong
+              - StaticText "教师活动"
+            - StaticText "示范四步批注并呈现空泛反例，组织比较。"
+            - strong
+              - StaticText "学生活动"
+            - StaticText "完成“证据—方法—效果—情感”批注并互评。"
+            - strong
+              - StaticText "学习产出"
+            - StaticText "一张包含原句证据和完整分析链的赏析卡。"
+            - strong
+              - StaticText "支架与分层"
+            - StaticText "基础学生使用四步表格，提升学生比较替换词语。"
+            - strong
+              - StaticText "设计意图"
+            - StaticText "以产出和标准推动深度阅读。"
+            - strong
+              - StaticText "观察与评价"
+            - StaticText "按引用、方法、效果、情感四项标准反馈。"
+          - generic
+            - sectionheader
+              - StaticText "05"
+              - heading "朗读悟情" [level=3, ref=e79]
+              - time
+                - StaticText "8 分钟"
+            - strong
+              - StaticText "任务目标"
+            - StaticText "通过朗读理解景物描写中的情感。"
+            - strong
+              - StaticText "情境 / 任务"
+            - StaticText "为班级朗读展示选择最能表现情感的语段。"
+            - strong
+              - StaticText "教师活动"
+            - StaticText "引导比较重音、节奏和语气，追问语言依据。"
+            - strong
+              - StaticText "学生活动"
+            - StaticText "设计朗读方案，说明依据并进行展示。"
+            - strong
+              - StaticText "学习产出"
+            - StaticText "带朗读标记的语段和依据说明。"
+            - strong
+              - StaticText "支架与分层"
+            - StaticText "提供重音、停连、语速提示。"
+            - strong
+              - StaticText "设计意图"
+            - StaticText "贯通语言形式、朗读表现与情感理解。"
+            - strong
+              - StaticText "观察与评价"
+            - StaticText "依据“处理合理、说明有据、情感一致”互评。"
+          - generic
+            - sectionheader
+              - StaticText "06"
+              - heading "迁移表达" [level=3, ref=e80]
+              - time
+                - StaticText "3 分钟"
+            - strong
+              - StaticText "任务目标"
+            - StaticText "把观察和准确用词迁移到真实写作。"
+            - strong
+              - StaticText "情境 / 任务"
+            - StaticText "为校园公众号写一段“今日春景”。"
+            - strong
+              - StaticText "教师活动"
+            - StaticText "明确 80 字、两种感官和一个准确动词的要求。"
+            - strong
+              - StaticText "学生活动"
+            - StaticText "完成片段，同伴圈出亮点并提出修改建议。"
+            - strong
+              - StaticText "学习产出"
+            - StaticText "80 字校园春景和一条修改记录。"
+            - strong
+              - StaticText "支架与分层"
+            - StaticText "提供感官词库和动词替换表。"
+            - strong
+              - StaticText "设计意图"
+            - StaticText "把阅读方法迁移为可观察的表达能力。"
+            - strong
+              - StaticText "观察与评价"
+            - StaticText "依据“两种感官+准确动词+表达有序”评价。"
+          - generic
+            - sectionheader
+              - StaticText "07"
+              - heading "回扣目标" [level=3, ref=e81]
+              - time
+                - StaticText "2 分钟"
+            - strong
+              - StaticText "任务目标"
+            - StaticText "完成目标自评并形成学习闭环。"
+            - strong
+              - StaticText "情境 / 任务"
+            - StaticText "用退出票回答“今天我学会了怎样读写景散文”。"
+            - strong
+              - StaticText "教师活动"
+            - StaticText "展示目标和标准，组织自评并说明分层作业。"
+            - strong
+              - StaticText "学生活动"
+            - StaticText "提交方法总结、疑问和目标自评。"
+            - strong
+              - StaticText "学习产出"
+            - StaticText "包含方法、疑问和自评的退出票。"
+            - strong
+              - StaticText "支架与分层"
+            - StaticText "提供“我学会了……，证据是……”句式。"
+            - strong
+              - StaticText "设计意图"
+            - StaticText "用学习证据结束课堂并支持后续改进。"
+            - strong
+              - StaticText "观察与评价"
+            - StaticText "教师课后按目标归类退出票。"
+        - generic
+          - StaticText "07"
+          - heading "递进问题链" [level=2, ref=e28]
+          - generic
+            - sectionheader
+              - StaticText "Q"
+              - StaticText "1"
+              - heading "作者依次写了哪些春景？这些内容为什么按这样的顺序安排？" [level=3, ref=e82]
+            - strong
+              - StaticText "设计意图"
+            - StaticText "检查整体感知与结构思维。"
+            - strong
+              - StaticText "预期要点"
+            - StaticText "能概括主要春景，并联系观察顺序或情感推进。"
+            - strong
+              - StaticText "追问纠偏"
+            - StaticText "如果调换其中两幅春景的位置，阅读感受会发生什么变化？"
+          - generic
+            - sectionheader
+              - StaticText "Q"
+              - StaticText "2"
+              - heading "“小草偷偷地从土里钻出来”中的“偷偷地”和“钻”能否删去？" [level=3, ref=e83]
+            - strong
+              - StaticText "设计意图"
+            - StaticText "引导学生用词语证据分析表达效果。"
+            - strong
+              - StaticText "预期要点"
+            - StaticText "写出小草悄然萌发和旺盛生命力，也传达发现春意的惊喜。"
+            - strong
+              - StaticText "追问纠偏"
+            - StaticText "把“钻”换成“长”，表达效果有什么不同？"
+          - generic
+            - sectionheader
+              - StaticText "Q"
+              - StaticText "3"
+              - heading "结尾三个比喻分别突出春天什么特点？顺序能否调换？" [level=3, ref=e84]
+            - strong
+              - StaticText "设计意图"
+            - StaticText "理解语言、结构与情感升华的关系。"
+            - strong
+              - StaticText "预期要点"
+            - StaticText "从新、生长、力量三个层次逐步推进。"
+            - strong
+              - StaticText "追问纠偏"
+            - StaticText "你会选择什么意象赞美家乡的春天？为什么？"
+        - generic
+          - StaticText "08"
+          - heading "随堂分层练习" [level=2, ref=e29]
+          - generic
+            - StaticText "基础层"
+            - heading "为“盼春—绘春—赞春”结构图补全主要春景。" [level=3, ref=e67]
+            - strong
+              - StaticText "设计目的"
+            - StaticText "检查整体感知和结构概括。"
+            - strong
+              - StaticText "成功标准"
+            - StaticText "内容完整、位置正确。"
+            - strong
+              - StaticText "答案要点"
+            - StaticText "绘春部分包括春草、春花、春风、春雨和迎春等画面。"
+          - generic
+            - StaticText "提升层"
+            - heading "任选一句，从关键词、修辞或感官描写角度完成一则赏析批注。" [level=3, ref=e68]
+            - strong
+              - StaticText "设计目的"
+            - StaticText "训练基于语言证据的赏析。"
+            - strong
+              - StaticText "成功标准"
+            - StaticText "包含原句证据、方法判断、表达效果和情感指向。"
+            - strong
+              - StaticText "答案要点"
+            - StaticText "答案开放，需依据文本并形成完整分析链。"
+          - generic
+            - StaticText "拓展层"
+            - heading "用两种感官描写校园春景，完成 80 字片段。" [level=3, ref=e69]
+            - strong
+              - StaticText "设计目的"
+            - StaticText "迁移写景方法。"
+            - strong
+              - StaticText "成功标准"
+            - StaticText "至少包含两种感官和一个准确动词，表达有序。"
+            - strong
+              - StaticText "答案要点"
+            - StaticText "答案开放，可按观察角度和语言具体性评价。"
+        - generic
+          - StaticText "09"
+          - heading "分层作业与反馈" [level=2, ref=e30]
+          - generic
+            - sectionheader
+              - StaticText "必做"
+              - time
+                - StaticText "约 12 分钟"
+            - heading "整理课堂结构图和一则优秀赏析批注，订正课堂练习。" [level=3, ref=e70]
+            - strong
+              - StaticText "设计目的"
+            - StaticText "巩固阅读路径和语言赏析方法。"
+            - strong
+              - StaticText "反馈方式"
+            - StaticText "教师抽查结构图，批注按成功标准给出一条具体反馈。"
+          - generic
+            - sectionheader
+              - StaticText "选做"
+              - time
+                - StaticText "约 18 分钟"
+            - heading "观察身边春景，完成 200 字片段，至少使用两种感官描写。" [level=3, ref=e71]
+            - strong
+              - StaticText "设计目的"
+            - StaticText "把阅读所得迁移到真实表达。"
+            - strong
+              - StaticText "反馈方式"
+            - StaticText "同伴互评后教师选择典型片段讲评；此用时需计入当天作业总量。"
+          - generic
+            - sectionheader
+              - StaticText "挑战"
+              - time
+                - StaticText "约 8 分钟"
+            - heading "改写一个适合家乡春天的新比喻并说明理由。" [level=3, ref=e72]
+            - strong
+              - StaticText "设计目的"
+            - StaticText "发展审美判断和创造性表达。"
+            - strong
+              - StaticText "反馈方式"
+            - StaticText "下一课时进行作品展示和口头点评。"
+          - paragraph
+            - StaticText "作业预计用时需计入学生当天各学科作业总量，由教师结合学校要求和班级实际调整。"
+        - generic
+          - StaticText "10"
+          - heading "板书设计" [level=2, ref=e31]
+          - paragraph
+            - StaticText "春"
+          - paragraph
+            - StaticText "盼春 "
+            - MathMLMath
+              - MathMLRow
+                - MathMLRow
+                  - MathMLOperator
+                    - StaticText "→"
+            - StaticText " 绘春 "
+            - MathMLMath
+              - MathMLRow
+                - MathMLRow
+                  - MathMLOperator
+                    - StaticText "→"
+            - StaticText " 赞春"
+          - paragraph
+            - StaticText "多感官观察 · 修辞表达 · 情景交融"
+        - generic
+          - StaticText "11"
+          - heading "教学评价量规" [level=2, ref=e32]
+          - StaticText "评价维度"
+          - StaticText "目标达成"
+          - StaticText "发展中"
+          - StaticText "证据来源"
+          - strong
+            - StaticText "结构概括"
+          - paragraph
+            - StaticText "能独立完整梳理结构并说明顺序依据。"
+          - paragraph
+            - StaticText "能在提示下补全结构，但顺序依据不清。"
+          - paragraph
+            - StaticText "结构图、小标题和口头说明。"
+          - strong
+            - StaticText "语言赏析"
+          - paragraph
+            - StaticText "能引用词句并说清方法、效果与情感。"
+          - paragraph
+            - StaticText "能判断方法，但缺少文本证据或效果分析。"
+          - paragraph
+            - StaticText "课堂批注、回答与同伴互评记录。"
+          - strong
+            - StaticText "方法迁移"
+          - paragraph
+            - StaticText "仿写具体有序，并准确使用所学方法。"
+          - paragraph
+            - StaticText "能完成基本描写，但方法使用不明显或表达笼统。"
+          - paragraph
+            - StaticText "随堂片段和课后习作。"
+        - generic
+          - StaticText "12"
+          - heading "课堂观察与应变预案" [level=2, ref=e33]
+          - generic
+            - heading "课堂观察点" [level=3, ref=e73]
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "哪些学生仍用“生动形象”替代具体分析？"
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "学生能否在同伴评价后依据标准修改批注？"
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "不同基础学生是否都获得了可见的进步证据？"
+          - generic
+            - heading "课堂应变预案" [level=3, ref=e74]
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "若朗读与字词处理超时，保留核心语段品析，将拓展仿写调整为课后任务。"
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "若学生赏析普遍空泛，暂停展示，增加一例反例对比并再次使用四步支架。"
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "若课堂进度提前，增加结尾三个比喻的顺序辨析。"
+        - generic
+          - StaticText "13"
+          - heading "课后反思" [level=2, ref=e34]
+          - strong
+            - StaticText "目标达成情况"
+          - strong
+            - StaticText "学生卡点与典型错误"
+          - strong
+            - StaticText "时间安排调整"
+          - strong
+            - StaticText "下次教学改进"
+        - sectionfooter
+          - StaticText "教师备课器 · AI生成初稿"
+          - paragraph
+            - StaticText "请结合教材、学生和真实课堂节奏进行专业调整"

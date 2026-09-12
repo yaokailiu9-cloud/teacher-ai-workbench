@@ -1,0 +1,141 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- banner
+  - heading "知识查缺补漏器" [level=1, ref=e5]
+  - paragraph
+    - StaticText "AI驱动的学习诊断与补漏规划"
+  - button "使用指南" [ref=e6]
+- main
+  - region "输入区域" [ref=e7]
+    - heading "输入区域" [level=2, ref=e9]
+    - form
+      - StaticText "1"
+      - heading "上传试卷或作业文件" [level=3, ref=e12]
+      - LabelText
+        - strong
+          - StaticText "点击或拖拽文件到此处上传"
+        - StaticText "支持试卷、作业、测验等文件"
+        - StaticText "PDF"
+        - StaticText "WORD"
+        - StaticText "PNG"
+        - StaticText "JPG"
+      - StaticText "2"
+      - heading "上传知识点 （可选）" [level=3, ref=e13]
+        - StaticText "上传知识点 "
+        - emphasis
+          - StaticText "（可选）"
+      - LabelText
+        - strong
+          - StaticText "点击或拖拽文件到此处上传"
+        - StaticText "可上传知识点清单、课标、教材目录；不上传则由 AI 自动识别"
+        - StaticText "PDF"
+        - StaticText "WORD"
+        - StaticText "PNG"
+        - StaticText "JPG"
+      - LabelText
+        - StaticText "年级"
+        - combobox "年级" [expanded=false, ref=e22]: 七年级
+          - MenuListPopup
+            - option "七年级" [selected, ref=e28]
+            - option "八年级" [ref=e29]
+            - option "九年级" [ref=e30]
+            - option "高一" [ref=e31]
+            - option "高二" [ref=e32]
+            - option "高三" [ref=e33]
+      - LabelText
+        - StaticText "科目"
+        - combobox "科目" [expanded=false, ref=e23]: 数学
+          - MenuListPopup
+            - option "数学" [selected, ref=e34]
+            - option "语文" [ref=e35]
+            - option "英语" [ref=e36]
+            - option "物理" [ref=e37]
+            - option "化学" [ref=e38]
+            - option "生物" [ref=e39]
+            - option "历史" [ref=e40]
+            - option "地理" [ref=e41]
+            - option "政治" [ref=e42]
+      - LabelText
+        - StaticText "目标考试 "
+        - emphasis
+          - StaticText "（可选）"
+        - combobox "目标考试 （可选）" [expanded=false, ref=e24]: 期末考试
+          - MenuListPopup
+            - option "期末考试" [selected, ref=e43]
+            - option "期中考试" [ref=e44]
+            - option "月考" [ref=e45]
+            - option "小升初" [ref=e46]
+            - option "中考" [ref=e47]
+            - option "高考" [ref=e48]
+      - LabelText
+        - StaticText "当前考试阶段 "
+        - emphasis
+          - StaticText "（可选）"
+        - combobox "当前考试阶段 （可选）" [expanded=false, ref=e25]: 70-80分
+          - MenuListPopup
+            - option "70-80分" [selected, ref=e49]
+            - option "60分以下" [ref=e50]
+            - option "60-70分" [ref=e51]
+            - option "80-90分" [ref=e52]
+            - option "90分以上" [ref=e53]
+      - button "生成漏洞地图" [ref=e14]
+        - StaticText "生成漏洞地图"
+      - StaticText "文件仅用于本次分析，服务端不保存上传内容"
+  - region "知识查缺补漏器" [ref=e8]
+    - heading "知识查缺补漏器" [level=2, ref=e10]
+    - paragraph
+      - StaticText "生成时间："
+      - StaticText "待生成"
+    - generic "报告下载"
+      - button "下载 PDF" [disabled, ref=e15]
+        - StaticText "下载 PDF"
+      - button "下载 Word" [disabled, ref=e16]
+        - StaticText "下载 Word"
+    - tablist "报告维度"
+      - button "知识点地图" [ref=e17]
+      - button "严重程度" [ref=e18]
+      - button "优先级" [ref=e19]
+      - button "30天路线" [ref=e20]
+    - generic
+      - heading "红黄绿知识点地图" [level=3, ref=e21]
+      - StaticText "掌握良好"
+      - StaticText "存在漏洞"
+      - StaticText "漏洞严重"
+      - StaticText "未涉及"
+      - generic "视图切换"
+        - button "树状图" [ref=e26]
+        - button "列表视图" [ref=e27]
+      - generic
+        - strong
+          - StaticText "上传两份资料后生成专属地图"
+        - StaticText "右侧会展示知识点分布、严重程度、优先级和 30 天补漏路线。"
+    - generic
+      - article
+        - StaticText "知识点总数"
+        - strong
+          - StaticText "0个"
+      - article
+        - StaticText "掌握良好"
+        - strong
+          - StaticText "0个"
+      - article
+        - StaticText "存在漏洞"
+        - strong
+          - StaticText "0个"
+      - article
+        - StaticText "漏洞严重"
+        - strong
+          - StaticText "0个"
+      - article
+        - StaticText "未涉及"
+        - strong
+          - StaticText "0个"
+    - button "查看完整内容" [disabled, ref=e11]

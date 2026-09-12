@@ -1,0 +1,251 @@
+- banner
+  - link "教师AI赋能站 UNIFIED WORKSTATION" [ref=e1]
+    - strong
+      - StaticText "教师AI赋能站"
+    - StaticText "UNIFIED WORKSTATION"
+  - link "返回主页 ↖" [ref=e2]
+    - StaticText "返回主页"
+    - StaticText "↖"
+  - button "105 积分" [ref=e3]
+  - button "123321" [ref=e4]
+- main
+  - region "AI提分空间测评" [ref=e5]
+    - heading "AI提分空间测评" [level=1, ref=e7]
+    - paragraph
+      - StaticText "基于学习表现与目标差距，AI为孩子生成个性化提分路径"
+    - form
+      - strong
+        - StaticText "填写孩子情况"
+      - StaticText "约1分钟"
+      - LabelText
+        - StaticText "*"
+        - StaticText " 年级"
+        - combobox "* 年级" [expanded=false, ref=e17]: 初二
+          - MenuListPopup
+            - option "小学三年级" [ref=e32]
+            - option "小学四年级" [ref=e33]
+            - option "小学五年级" [ref=e34]
+            - option "小学六年级" [ref=e35]
+            - option "初一" [ref=e36]
+            - option "初二" [selected, ref=e37]
+            - option "初三" [ref=e38]
+            - option "高一" [ref=e39]
+            - option "高二" [ref=e40]
+            - option "高三" [ref=e41]
+      - LabelText
+        - StaticText "*"
+        - StaticText " 科目"
+        - combobox "* 科目" [expanded=false, ref=e18]: 数学
+          - MenuListPopup
+            - option "数学" [selected, ref=e42]
+            - option "语文" [ref=e43]
+            - option "英语" [ref=e44]
+            - option "物理" [ref=e45]
+            - option "化学" [ref=e46]
+            - option "生物" [ref=e47]
+            - option "历史" [ref=e48]
+            - option "地理" [ref=e49]
+            - option "政治" [ref=e50]
+      - LabelText
+        - StaticText "*"
+        - StaticText " 试卷满分"
+        - spinbutton "* 试卷满分 分" [required, ref=e19]: 100
+          - StaticText "100"
+        - StaticText "分"
+      - LabelText
+        - StaticText "*"
+        - StaticText " 当前分数"
+        - spinbutton "* 当前分数 分" [required, ref=e20]: 68
+          - StaticText "68"
+        - StaticText "分"
+      - LabelText
+        - StaticText "*"
+        - StaticText " 目标分数"
+        - spinbutton "* 目标分数 分" [required, ref=e21]: 85
+          - StaticText "85"
+        - StaticText "分"
+      - group "* 学习表现"
+        - Legend
+          - StaticText "* 学习表现"
+        - LabelText
+          - radio "基础薄弱，跟不上进度" [checked=false, ref=e22]
+          - StaticText "基础薄弱，跟不上进度"
+        - LabelText
+          - radio "中等水平，波动较大" [checked=true, ref=e23]
+          - StaticText "中等水平，波动较大"
+        - LabelText
+          - radio "成绩中上，寻求突破" [checked=false, ref=e24]
+          - StaticText "成绩中上，寻求突破"
+        - LabelText
+          - radio "优势明显，冲击高分" [checked=false, ref=e25]
+          - StaticText "优势明显，冲击高分"
+      - group "家长最焦虑的问题 （可选填）"
+        - Legend
+          - StaticText "家长最焦虑的问题 "
+          - emphasis
+            - StaticText "（可选填）"
+        - LabelText
+          - checkbox "基础不牢，概念易错" [checked=false, ref=e26]
+          - StaticText "基础不牢，概念易错"
+        - LabelText
+          - checkbox "粗心失分，马虎大意" [checked=false, ref=e27]
+          - StaticText "粗心失分，马虎大意"
+        - LabelText
+          - checkbox "题型方法不会用" [checked=false, ref=e28]
+          - StaticText "题型方法不会用"
+        - LabelText
+          - checkbox "阅读理解/应用题困难" [checked=false, ref=e29]
+          - StaticText "阅读理解/应用题困难"
+        - LabelText
+          - checkbox "考试时间不够用" [checked=false, ref=e30]
+          - StaticText "考试时间不够用"
+        - LabelText
+          - checkbox "学习动力不足，注意力不集中" [checked=false, ref=e31]
+          - StaticText "学习动力不足，注意力不集中"
+      - LabelText
+        - StaticText "上传试卷/作业"
+      - LabelText
+        - image
+        - strong
+          - StaticText "上传试卷/作业"
+        - StaticText "支持考试试卷、近期作业、错题照片"
+        - StaticText "PDF / Word / PNG / JPG"
+      - button "生成提分空间测评" [ref=e8]
+        - image
+        - StaticText "生成提分空间测评"
+      - image
+      - StaticText "初步判断，不承诺保分"
+  - region "提分空间测评结果 （初步）" [ref=e6]
+    - generic "报告下载"
+      - button "下载 PDF" [ref=e9]
+        - image
+        - StaticText "下载 PDF"
+      - button "下载 Word" [ref=e10]
+        - image
+        - StaticText "下载 Word"
+    - sectionheader
+      - heading "提分空间测评结果 （初步）" [level=2, ref=e11]
+        - StaticText "提分空间测评结果 （初步）"
+      - paragraph
+        - StaticText "年级："
+        - strong
+          - StaticText "初二"
+      - paragraph
+        - StaticText "科目："
+        - strong
+          - StaticText "数学"
+      - paragraph
+        - StaticText "满分："
+        - strong
+          - StaticText "100"
+      - paragraph
+        - StaticText "当前分数："
+        - strong
+          - StaticText "68"
+          - StaticText "/"
+          - StaticText "100"
+      - paragraph
+        - StaticText "目标分数："
+        - strong
+          - StaticText "85"
+          - StaticText "/"
+          - StaticText "100"
+      - paragraph
+        - StaticText "测评时间："
+        - strong
+          - StaticText "2024-05-20"
+    - generic
+      - StaticText "当前分数层级"
+      - strong
+        - StaticText "中等偏下"
+      - paragraph
+        - StaticText "已掌握基础知识点的60%-70%，具备提升空间。通过针对性补强与方法优化，有望实现稳步提分。"
+    - StaticText "差距 "
+    - strong
+      - StaticText "17"
+    - StaticText "分"
+    - generic
+    - generic
+      - StaticText "当前 68"
+      - StaticText "目标 85"
+    - generic
+      - article
+        - strong
+          - StaticText "先拿回 9分"
+        - StaticText "夯实基础"
+      - article
+        - strong
+          - StaticText "再冲刺 8分"
+        - StaticText "提升稳定性"
+      - article
+        - strong
+          - StaticText "挑战 8+分"
+        - StaticText "攻克压轴"
+    - generic
+      - heading "优先提分方向 （按优先级）" [level=3, ref=e12]
+        - StaticText "优先提分方向 （按优先级）"
+      - generic
+        - article
+          - StaticText "1"
+          - strong
+            - StaticText "基础计算与概念应用"
+          - paragraph
+            - StaticText "计算错误较多，概念理解不扎实，建议优先巩固基础题型。"
+          - StaticText "可提分：6~8分"
+        - article
+          - StaticText "2"
+          - strong
+            - StaticText "函数与方程应用题"
+          - paragraph
+            - StaticText "审题与建模能力不足，步骤易失分，需强化方法与题型训练。"
+          - StaticText "可提分：5~6分"
+        - article
+          - StaticText "3"
+          - strong
+            - StaticText "几何证明与综合题"
+          - paragraph
+            - StaticText "思路不完整，书写不规范，需提升逻辑表达与综合运用能力。"
+          - StaticText "可提分：4~6分"
+      - heading "30天提分建议" [level=3, ref=e13]
+      - generic
+        - article
+          - image
+          - strong
+            - StaticText "第1周 夯实基础"
+          - paragraph
+            - StaticText "回顾教材核心概念，完成基础题专项训练"
+        - article
+          - image
+          - strong
+            - StaticText "第2周 专题突破"
+          - paragraph
+            - StaticText "针对函数与方程应用题，掌握解题方法"
+        - article
+          - image
+          - strong
+            - StaticText "第3周 综合提升"
+          - paragraph
+            - StaticText "强化几何与综合题，提升解题规范与速度"
+        - article
+          - image
+          - strong
+            - StaticText "第4周 模考冲刺"
+          - paragraph
+            - StaticText "真题模拟训练，查漏补缺，稳定心态"
+    - generic
+      - image
+      - strong
+        - StaticText "查看完整报告"
+      - StaticText "展开完整测评结论、提分路径与数据分析详情"
+      - button "查看完整报告" [ref=e14]
+        - StaticText "查看完整报告"
+        - image
+    - sectionfooter
+      - StaticText "初步判断，不承诺保分"
+      - button "复制结果" [ref=e15]
+        - image
+        - StaticText "复制结果"
+      - button "下载报告" [ref=e16]
+        - image
+        - StaticText "下载报告"
+- status
