@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "workbench",
+      "runtimeExecutable": "/Users/nidie/.hermes/node/bin/node",
+      "runtimeArgs": [".claude/serve.js"],
+      "port": 4173
+    }
+  ]
+}

@@ -36,6 +36,7 @@ const playbooks={
 '24':['提取课文知识地图','标注重点难点','设计课前任务','输出预习单'],
 '25':['汇总教材、板书和作业','按主题重组知识','补充例题与易错提醒','生成复习笔记'],
 '26':['识别学生与题目','按批次评分','生成评分说明与错题标签','汇总班级数据']};
+window.SPEC_PLAYBOOKS=playbooks;
 const fieldConfigs={
 '01':['数学','年级、学科、知识点与难度'], '02':['自动识别','试卷或成绩资料'], '03':['自动识别','教材/章节资料'], '06':['自动识别','试卷与图形资料'],
 '07':['数学','原题与错题答案'], '08':['自动识别','PDF / Word / 图片'], '09':['自动识别','教材与教学要求'], '10':['自动识别','成绩与试卷资料'],
@@ -54,6 +55,7 @@ const byId=id=>tools.find(t=>t[0]===id);
 function home(){app.innerHTML=`<section class="hero"><div class="hero-shade"></div><div class="hero-content"><p class="hero-eyebrow"><span>教师工作的新基础设施</span><b>2026</b></p><h1>AI赋能教师提效、教学提分、教培增长。</h1><div class="hero-actions"><a class="primary-action" href="#workbench">进入教师工作台 ↘</a><a class="text-action" href="#tool/17">开始复刻流程</a></div></div><aside class="hero-index"><span>01</span><span>02</span><span>03</span></aside></section><section class="workbench" id="workbench">${groups.map((g,i)=>`<section class="module-group"><div class="module-group-heading"><div><p class="module-group-kicker">WORKBENCH / 0${i+1}</p><h2>${g[1]}</h2></div><p>${g[2]}</p></div><div class="module-grid">${tools.filter(t=>t[4]===g[0]).map(t=>card(t)).join('')}</div></section>`).join('')}</section>`}
 function card(t){return `<a class="module-card" href="#tool/${t[0]}"><div class="module-top"><span class="module-number">MODULE / ${t[0]}</span></div><h3 class="module-title">${t[1]}</h3><p class="module-label">${t[2]}</p><p class="module-description">${t[3]}</p><span class="module-enter">进入工具 <b>↗</b></span></a>`}
 function toolPage(t){
+  if(window.renderSpecPage&&window.renderSpecPage(t[0]))return;
   if(t[0]==='21') return senseTrainingPage(t);
   if(t[0]==='01') return examGeneratorPage(t);
   if(t[0]==='07') return variationPage(t);
