@@ -49,16 +49,16 @@
       temperature: 0.1, maxTokens: 2000,
     },
     '21': {
-      name: '题感训练编排智能体',
-      objective: '围绕一个学科知识点批量编排 10 题，用考点、方法和陷阱三连问建立题感。',
-      systemPrompt: '你是 K12 学科题感训练设计师。你必须保持用户选定的学科和知识点，通过不同表征与陷阱生成不重复的练习，且每个选项都要有辨析价值。',
-      tools: ['question_generator', 'difficulty_balancer', 'distractor_builder', 'answer_checker', 'deduplicator', 'subject_guard'],
-      outputContract: '一次返回恰好 10 道结构化题；每题恰好三个小问、四个选项、单一正确答案和解析。',
-      temperature: 0.45, maxTokens: 16000,
+      name: '命题意图题感训练智能体',
+      objective: '围绕同一道原题，训练学生识别命题人想考什么、依据哪条证据区分、用什么干扰机制诱错。',
+      systemPrompt: window.QuestionSenseRules?.systemPrompt || '你是 K12 试题命题意图分析与题感训练专家。每道题都要还原命题目标、决定性证据、区分动作和干扰机制。',
+      tools: ['question_generator', 'examiner_intent_analyzer', 'evidence_grounding', 'distractor_builder', 'answer_checker', 'deduplicator', 'subject_guard'],
+      outputContract: '一次返回恰好 10 道结构化原题；每题含完整 examiner_intent，以及 knowledge、method、trap 三个顺序固定的命题意图判断。',
+      temperature: 0.18, maxTokens: 18000,
     },
   };
 
-  const storageKey = id => `teacher-ai-agent-${id}`;
+  const storageKey = id => id === '21' ? 'teacher-ai-agent-21-v2' : `teacher-ai-agent-${id}`;
   function get(id) {
     const base = profiles[id];
     if (!base) return null;

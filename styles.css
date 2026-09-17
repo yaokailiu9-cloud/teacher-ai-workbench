@@ -426,6 +426,7 @@ body.sense-route{background:#070b13;color:#858aa3}
 .sense-option>span{display:grid;width:28px;height:28px;place-items:center;border:1px solid #4a4f71;border-radius:8px;color:#9d94ff;font-weight:700}
 .sense-option>b{font-size:14px;line-height:1.6;font-weight:400}
 .sense-option:hover:not(.locked){border-color:#6d63e6;background:#201f3e}
+.sense-option.selected-answer{border-color:#8b80ff;background:#272351;color:#fff;transform:translateY(-1px)}
 .sense-option.correct{border-color:#30b98c;background:#102d2a;color:#83e4c2}
 .sense-option.wrong{border-color:#d85c68;background:#351c28;color:#f3a0aa}
 .sense-option.locked{cursor:default}
@@ -437,9 +438,30 @@ body.sense-route{background:#070b13;color:#858aa3}
 .sense-actions{text-align:right}
 .sense-actions .text-action,.sense-next,.sense-home{display:inline-block;padding:10px 20px;border:1px solid #665cdf;border-radius:9px;background:#7166ed;color:#fff;text-decoration:none;cursor:pointer}
 .sense-home{margin-left:10px;background:transparent;color:#a39aff}
+.sense-stem>span{display:inline-block;margin-bottom:8px;padding:3px 9px;border-radius:999px;background:#242947;color:#9e96ff;font-size:11px}
+.sense-summary-score{margin:34px 0 22px;text-align:center}
+.sense-summary-score b{display:block;color:#ff9278;font-size:64px;line-height:1;font-weight:800}
+.sense-summary-score span{display:block;margin-top:10px;color:#777c96;font-size:16px}
+.sense-summary-list{display:grid;gap:12px;padding:28px 34px;border:1px solid #303650;border-radius:22px;background:#121622}
+.sense-judgement-card{padding:20px 24px;border-left:5px solid #ff795b;border-radius:16px;background:#34282f}
+.sense-judgement-card.is-right{border-left-color:#4bc59d;background:#17332e}
+.sense-judgement-card h3{margin:0 0 11px;color:#ff8064;font-size:17px}
+.sense-judgement-card.is-right h3{color:#67d5b1}
+.sense-judgement-card p{margin:5px 0;color:#e2dce2;font-size:14px;line-height:1.65}
+.sense-intent-analysis{margin-top:22px;padding:28px 34px;border:1px solid #303650;border-radius:22px;background:#121622}
+.sense-intent-analysis>h3{margin:0 0 15px;color:#9f96ff;font-size:19px}
+.sense-intent-analysis>p{margin:0;padding:22px 24px;border-radius:15px;background:#1d2439;color:#dce0ed;font-size:15px;line-height:1.9;white-space:pre-wrap}
+.sense-intent-analysis dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:15px 0 0}
+.sense-intent-analysis dl>div{padding:13px 15px;border:1px solid #2d3451;border-radius:12px;background:#171c2d}
+.sense-intent-analysis dt{margin-bottom:5px;color:#958bff;font-size:12px;font-weight:700}
+.sense-intent-analysis dd{margin:0;color:#b8bdce;font-size:13px;line-height:1.65}
+.sense-summary-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.sense-summary-actions button{height:54px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer}
+.sense-summary-back{border:1px solid #343b5a;background:#1c2235;color:#d9dceb}
+.sense-summary-actions .sense-next{border-color:#7166ed;background:#7166ed;color:#fff}
 @keyframes sense-spin{to{transform:rotate(360deg)}}
 @media(max-width:900px){.sense-page{padding:16px 20px 45px}.sense-picker-row{grid-template-columns:1fr}.subject-section{min-height:110px}.sense-form{padding:16px}.sense-start{margin-top:24px}.sense-route .site-nav{padding:0 16px}.sense-route .sense-nav-points{display:none}.sense-route .brand-copy small{display:none}}
-@media(max-width:620px){.sense-route .sense-nav-back{display:none}.sense-route #account{font-size:11px}.grade-grid{grid-template-columns:repeat(2,1fr)}.subject-grid{grid-template-columns:repeat(2,1fr)}.sense-notice{height:auto;padding:10px 13px;line-height:1.65!important}.sense-picker-row{min-height:0}.sense-stats{gap:24px}.sense-q{padding:18px 15px}}
+@media(max-width:620px){.sense-route .sense-nav-back{display:none}.sense-route #account{font-size:11px}.grade-grid{grid-template-columns:repeat(2,1fr)}.subject-grid{grid-template-columns:repeat(2,1fr)}.sense-notice{height:auto;padding:10px 13px;line-height:1.65!important}.sense-picker-row{min-height:0}.sense-stats{gap:24px}.sense-q{padding:18px 15px}.sense-summary-list,.sense-intent-analysis{padding:19px 16px}.sense-intent-analysis dl{grid-template-columns:1fr}.sense-summary-actions{grid-template-columns:1fr}}
 
 /* 07 知识点/考点圆点列表（对齐原版） */
 .wq-bullets{margin:0;padding-left:18px;display:grid;gap:5px}

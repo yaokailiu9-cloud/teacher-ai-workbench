@@ -11,7 +11,7 @@ tools = set(re.findall(r"\['(\d{2})'", tool_block))
 playbooks = set(re.findall(r"'(\d{2})':\[", js))
 assert tools == required, f"tool ids mismatch: {sorted(tools ^ required)}"
 assert playbooks == required, f"playbook ids mismatch: {sorted(playbooks ^ required)}"
-for filename in ("index.html", "styles.css", "app.js", "README.md", "verify.py", "PRODUCT_SPEC.md"):
+for filename in ("index.html", "styles.css", "app.js", "question-sense-rules.js", "README.md", "verify.py", "PRODUCT_SPEC.md"):
     path = root / filename
     assert path.exists() and path.stat().st_size > 0, f"missing artifact: {filename}"
 assert "id=\"app\"" in (root / "index.html").read_text()
@@ -23,6 +23,10 @@ learning_js = (root / "learning-core.js").read_text()
 for tool_id in ("02", "07", "17", "18", "19", "20", "21"):
     assert f"'{tool_id}':" in agent_js, f"missing agent profile: {tool_id}"
 assert "chatAgent" in learning_js and "prepareFiles" in learning_js and "subjectRule" in learning_js
+question_sense_rules = (root / "question-sense-rules.js").read_text()
+for marker in ("examiner_intent", "source_answer", "source_explanation", "knowledge", "method", "trap", "命题目标", "决定性证据", "干扰机制"):
+    assert marker in question_sense_rules, f"missing question-sense rule marker: {marker}"
+assert "question-sense-rules.js?v=53" in (root / "index.html").read_text(), "question-sense rules must load before agent config"
 assert (root / "SEVEN_TOOL_AUDIT.md").exists(), "missing seven-tool audit"
 site_data = json.loads((root / "sites.json").read_text())
 assert len(site_data.get("sites", [])) == 24, "site catalog must contain 24 tools"
