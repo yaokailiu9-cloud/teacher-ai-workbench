@@ -18,6 +18,12 @@ assert "id=\"app\"" in (root / "index.html").read_text()
 assert "python3 -m http.server 4173" in (root / "README.md").read_text()
 spec = (root / "PRODUCT_SPEC.md").read_text()
 assert "高中数学" in spec and "六个维度" in spec
+agent_js = (root / "agent-config.js").read_text()
+learning_js = (root / "learning-core.js").read_text()
+for tool_id in ("02", "07", "17", "18", "19", "20", "21"):
+    assert f"'{tool_id}':" in agent_js, f"missing agent profile: {tool_id}"
+assert "chatAgent" in learning_js and "prepareFiles" in learning_js and "subjectRule" in learning_js
+assert (root / "SEVEN_TOOL_AUDIT.md").exists(), "missing seven-tool audit"
 site_data = json.loads((root / "sites.json").read_text())
 assert len(site_data.get("sites", [])) == 24, "site catalog must contain 24 tools"
 hero = root / "assets" / "hero-knowledge-infrastructure.png"

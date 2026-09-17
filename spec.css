@@ -134,7 +134,8 @@
   cursor: pointer;
   text-align: center;
 }
-.spec-drop:hover { border-color: var(--sp-accent); color: var(--sp-accent); }
+.spec-drop:hover,
+.spec-drop.is-dragging { border-color: var(--sp-accent); color: var(--sp-accent); background: rgba(95, 226, 202, .06); }
 
 .spec-img {
   background: #0a1626;
@@ -279,3 +280,22 @@ label.spec-label.spec-drop .drop-status { display: block; margin-top: 8px; color
 .report-step h4 span { color: var(--sp-accent); font-size: 12px; }
 .report-actions { margin-top: 24px; display: flex; gap: 8px; }
 .report-actions .spec-btn { margin: 0; }
+
+/* Structured report body (renderReportBody in specapp.js). */
+.report-step p { margin: 6px 0; line-height: 1.75; white-space: pre-wrap; color: #cfd9ea; font-size: 13.5px; }
+.report-step h4 { font-size: 14.5px; color: var(--sp-text); }
+.report-badge { font-style: normal; font-size: 11px; font-weight: 600; border-radius: 999px; padding: 2px 9px; margin-left: 8px; vertical-align: 1px; }
+.report-badge.b-ok { color: #7ef0b6; background: rgba(110, 227, 194, .13); }
+.report-badge.b-mint { color: var(--sp-accent); background: rgba(111, 227, 194, .1); }
+.report-badge.b-info { color: #8fc7ff; background: rgba(96, 165, 250, .13); }
+.report-badge.b-warn { color: #ffd27e; background: rgba(245, 183, 49, .15); }
+.report-badge.b-bad { color: #ff9d9d; background: rgba(240, 90, 90, .15); }
+.report-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0; }
+.report-metrics .metric { background: #12283f; border: 1px solid var(--sp-line); border-top: 2px solid var(--sp-accent); border-radius: 6px; padding: 12px 14px; }
+.report-metrics .metric small { display: block; color: var(--sp-muted); font-size: 11px; margin-bottom: 6px; }
+.report-metrics .metric b { font-size: 24px; color: var(--sp-accent); }
+.report-metrics .metric.accent { border-top-color: #ffd27e; }
+.report-metrics .metric.accent b { color: #ffd27e; }
+.report-metrics .metric.warn { border-top-color: #ff9d9d; }
+.report-metrics .metric.warn span { display: block; font-size: 12.5px; line-height: 1.55; color: var(--sp-text); }
+@media (max-width: 760px) { .report-metrics { grid-template-columns: 1fr; } }

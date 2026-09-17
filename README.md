@@ -6,13 +6,42 @@
 
 `PRODUCT_SPEC.md` 是工具复刻的产品级基本提示词，规定字段、按钮、学科逻辑和结果依据。
 
+`agent-config.js` 定义了 02/07/17/18/19/20/21 七个教学提分智能体，包括独立的系统提示词、能力路由、输出契约和模型参数。对应页面的“AI 智能体配置”面板可查看并在本机覆盖系统提示词。`SEVEN_TOOL_AUDIT.md` 记录了逐工具审查、已补齐内容与仍需外部 API 的能力。
+
+## 真实生成结果存档
+
+`review_jiaoshiai/results/` 保存了 24 个工具**真实消耗积分生成**后的结果结构（2026-09-13 实测）：
+
+- 每个工具一个目录：`report.txt`（结果全文）、`structure.json`（标题/按钮结构）、`meta.txt`（输入与流程说明）。
+- `results/README.md` 是**真实结果结构总览**：每个工具结果区的板块顺序、按钮清单、上传是否为硬门槛、两类流程形态（直接生成型 vs 逐题生成+组卷型）与导出配置。
+- `app.js` 中的 `playbooks`（各工具生成模板骨架）已按该实测结构回填。
+- 特殊样本：`06-exam-ppt/workbench.png`（课件工作台截图）、`13-knowledge-gap/full_content.txt`（红黄绿地图全量）、`23-teaching-aid-maker/generated_image.png`（真实生成的教辅图）、`21-question-sense/answer_flow.json`（三连问作答流程）。
+
 ## 启动
+
+项目的生成请求通过本地 Node 代理（`.claude/serve.js`）发送，支持两种上游，按环境变量自动选择：
+
+- **阿里云 MaaS / 任意 OpenAI 兼容端点（当前在用）**：`OPENAI_API_KEY` + `OPENAI_BASE_URL`（如 `https://ws-xxx.cn-beijing.maas.aliyuncs.com/compatible-mode/v1`）+ `OPENAI_MODEL`（如 `qwen3.8-max-0902`）。
+- 中转站 + Anthropic 兼容：`ANTHROPIC_BASE_URL` + `ANTHROPIC_AUTH_TOKEN` + `ANTHROPIC_MODEL`（思考型模型超时已设 5 分钟）。
+- 智谱官方直连：`ZHIPU_API_KEY`（open.bigmodel.cn 的 Key），可选 `ZHIPU_MODEL`（默认 `glm-4.5`）。
+
+**视觉（图片）输入**：`/api/chat` 的 user 消息 `content` 支持分片数组 `[{type:'image_url',image_url:{url:'data:image/png;base64,…'}},{type:'text',text:'…'}]`。页面允许选择单个不超过 20MB 的 PNG/JPG/WebP/GIF，超过模型 5MB 入参限制的静态图会先在浏览器自动缩放和压缩；每次最多 10 张。带图请求会自动切换视觉型号：GLM 纯文本型号（如 `glm-4.5`）自动换成 `glm-4.5v`，可用 `ZHIPU_VISION_MODEL` / `ANTHROPIC_VISION_MODEL` 覆盖；Claude 等原生多模态型号不切换。通用生成器和 07「错题举一反三」都会把上传图片实际发给模型读图；PDF/DOCX 会先经本地 `/api/extract` 提取文字。
+
+**打开方式**：不要在 `file://` 模式下直接运行工具，否则浏览器无法访问 `/api/chat` 和 `/api/extract`。新版 `index.html` 在被直接双击时会自动转到 `http://127.0.0.1:4173`；请确保 `.claude/serve.js` 已启动。
+
+API Key 只从环境变量读取，不要写入源码、网页或项目文件。
+
+```bash
+OPENAI_API_KEY='sk-xxx' OPENAI_BASE_URL='https://ws-xxx.cn-beijing.maas.aliyuncs.com/compatible-mode/v1' OPENAI_MODEL='qwen3.8-max-0902' node .claude/serve.js
+```
+
+访问 <http://localhost:4173>。未配置 Key 时页面仍可打开，但生成操作会提示配置错误；上游返回的业务错误（如令牌无效）会原样显示在页面提示里，便于排查。
+
+仅查看静态页面（不提供 API 代理）时，也可以运行：
 
 ```bash
 python3 -m http.server 4173
 ```
-
-访问 <http://localhost:4173>。
 
 完整性校验：
 
