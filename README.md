@@ -49,6 +49,29 @@ python3 -m http.server 4173
 python3 verify.py
 ```
 
+## 线上发行与自动更新
+
+`main` 分支每次推送后，GitHub Actions 会自动执行完整性与 JavaScript 语法校验，成功后发布最新应用镜像：
+
+```text
+ghcr.io/yaokailiu9-cloud/teacher-ai-workbench:latest
+```
+
+首次运行前在项目目录配置 `.env`（文件已被 Git 忽略，不会上传），然后启动：
+
+```bash
+docker compose up -d
+```
+
+`compose.yaml` 已设置 `pull_policy: always`，每次重新启动都会拉取最新线上版本：
+
+```bash
+docker compose pull
+docker compose up -d
+```
+
+版本标签（如 `v1.0.0`）会同时发布对应的固定镜像版本，方便回滚和多环境同步。运行时 API Key 只通过服务器环境变量注入，不会打包进镜像。
+
 ## 路由
 
 - `#/`：教师工作台

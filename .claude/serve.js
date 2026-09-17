@@ -20,10 +20,14 @@ const MAX_UPLOAD_BYTES = 20 * 1024 * 1024;
 const MAX_EXTRACT_FILES = 10;
 const MAX_PDF_HTML_CHARS = 15 * 1024 * 1024;
 const CHROME_PATHS = [
+  process.env.CHROME_PATH,
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   '/Applications/Chromium.app/Contents/MacOS/Chromium',
   '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
-];
+  '/usr/bin/chromium',
+  '/usr/bin/chromium-browser',
+  '/usr/bin/google-chrome',
+].filter(Boolean);
 const PDF_EXTRACT_SWIFT = `
 import Foundation
 import PDFKit
@@ -294,6 +298,10 @@ function decodeXmlText(xml) {
 
 async function extractFileText(filePath, ext) {
   if (ext === '.pdf') {
+    if (fs.existsSync('/usr/bin/pdftotext')) {
+      const { stdout } = await execFileAsync('/usr/bin/pdftotext', ['-layout', filePath, '-'], { maxBuffer: 4 * 1024 * 1024, timeout: 30000 });
+      return stdout.trim();
+    }
     const { stdout } = await execFileAsync('/usr/bin/swift', ['-e', PDF_EXTRACT_SWIFT, filePath], { maxBuffer: 4 * 1024 * 1024, timeout: 30000 });
     return stdout.trim();
   }
@@ -432,6 +440,7 @@ async function handlePdf(req, res) {
 
 const root = __dirname ? path.resolve(__dirname, '..') : process.cwd();
 const port = Number(process.env.PORT) || 4173;
+const host = process.env.HOST || '127.0.0.1';
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -445,6 +454,7 @@ const MIME = {
   '.pdf': 'application/pdf',
   '.txt': 'text/plain; charset=utf-8',
   '.md': 'text/plain; charset=utf-8',
+  '.woff2': 'font/woff2',
 };
 
 http.createServer((req, res) => {
@@ -483,4 +493,4 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': MIME[path.extname(filePath).toLowerCase()] || 'application/octet-stream' });
     res.end(data);
   });
-}).listen(port, '127.0.0.1', () => console.log(`serving ${root} at http://localhost:${port}`));
+}).listen(port, host, () => console.log(`serving ${root} at http://${host}:${port}`));

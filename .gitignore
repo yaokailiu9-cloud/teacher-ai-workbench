@@ -10,6 +10,7 @@
 review_jiaoshiai/results/
 pelican-bicycle.html
 pelican-coastal-ride.html
+design-qa-*.png
 
 # Keep only the KaTeX runtime used by the app, not the full npm distribution.
 vendor/katex/*

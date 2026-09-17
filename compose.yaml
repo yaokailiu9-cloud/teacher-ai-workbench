@@ -1,0 +1,19 @@
+services:
+  teacher-ai-workbench:
+    image: ghcr.io/yaokailiu9-cloud/teacher-ai-workbench:latest
+    pull_policy: always
+    restart: unless-stopped
+    ports:
+      - "4173:4173"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-}
+      OPENAI_ENABLE_THINKING: ${OPENAI_ENABLE_THINKING:-false}
+      ZHIPU_API_KEY: ${ZHIPU_API_KEY:-}
+      ZHIPU_MODEL: ${ZHIPU_MODEL:-}
+      ZHIPU_VISION_MODEL: ${ZHIPU_VISION_MODEL:-}
+      ANTHROPIC_AUTH_TOKEN: ${ANTHROPIC_AUTH_TOKEN:-}
+      ANTHROPIC_BASE_URL: ${ANTHROPIC_BASE_URL:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-}
+      ANTHROPIC_VISION_MODEL: ${ANTHROPIC_VISION_MODEL:-}
