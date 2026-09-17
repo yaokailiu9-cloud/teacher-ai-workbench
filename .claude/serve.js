@@ -411,7 +411,41 @@ async function handlePdf(req, res) {
     const localStyles = ['styles.css', 'spec.css'].map(file => {
       try { return fs.readFileSync(path.join(root, file), 'utf8'); } catch { return ''; }
     }).join('\n');
-    const documentHtml = `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>${localStyles}\n@page{size:A4;margin:8mm}html,body,.wq-page,.wa-page,.spec-page,.tool-page{background:#fff!important;color:#111!important;min-height:0!important}body{margin:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wq-page,.wa-page,.spec-page,.tool-page{padding:0!important}.a4-paper,.wa-paper,.spec-report,.exam-paper{box-shadow:none!important;max-width:none!important;width:auto!important;margin:0!important}.wq-page .a4-paper{box-sizing:border-box!important;min-height:281mm!important;padding:12mm 14mm 14mm 18mm!important}.wa-paper,.spec-report,.exam-paper{min-height:0!important;padding:0!important}.seal-line{position:absolute!important}.report-actions,.preview-bottom-bar,.compose-bar{display:none!important}.katex{font-size:1em}.katex>.katex-html{display:none!important}.katex>.katex-mathml{display:inline!important;position:static!important;width:auto!important;height:auto!important;overflow:visible!important;clip:auto!important;white-space:normal!important}math{font-family:"STIX Two Math","Times New Roman",serif}</style></head><body>${safePdfHtml(input.html)}</body></html>`;
+    const printStyles = `
+@page{size:A4;margin:15mm 16mm 17mm}
+html,body{background:#fff!important;color:#111!important;min-height:0!important}
+body{margin:0;font-family:"Songti SC","Noto Serif CJK SC","Microsoft YaHei",Arial,sans-serif;font-size:11pt;line-height:1.72;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.pdf-export,.pdf-export.wq-page,.pdf-export.wa-page,.pdf-export.spec-page,.pdf-export.tool-page{--sp-bg:#fff;--sp-panel:#fff;--sp-panel-alt:#fff;--sp-line:#555;--sp-text:#111;--sp-muted:#333;--sp-accent:#111;background:#fff!important;color:#111!important;min-height:0!important;padding:0!important}
+.pdf-export *{box-sizing:border-box;text-shadow:none!important}
+.pdf-export .a4-paper,.pdf-export .wa-paper,.pdf-export .spec-report,.pdf-export .exam-paper{background:#fff!important;color:#111!important;box-shadow:none!important;max-width:none!important;width:auto!important;min-height:0!important;margin:0!important}
+.pdf-export .wq-page .a4-paper,.pdf-export.wq-page .a4-paper{min-height:0!important;padding:0!important}
+.pdf-export .wa-paper,.pdf-export .spec-report,.pdf-export .exam-paper{padding:0!important;font-family:"Songti SC","Noto Serif CJK SC","Microsoft YaHei",Arial,sans-serif}
+.pdf-export .spec-sectionhead{margin:0 0 8mm;padding:0 0 4mm;border-bottom:2px solid #111!important;text-align:center}
+.pdf-export .spec-sectionhead h2{margin:0!important;color:#111!important;font-family:"Heiti SC","Microsoft YaHei",Arial,sans-serif;font-size:18pt!important;line-height:1.35;font-weight:800;letter-spacing:.04em}
+.pdf-export .report-params{display:flex!important;flex-wrap:wrap;gap:3mm;margin:0 0 5mm!important;padding:0}
+.pdf-export .report-param{background:#fff!important;border:1px solid #777!important;border-radius:2px!important;padding:2mm 3mm!important;color:#111!important;font-size:9.5pt!important;line-height:1.4}
+.pdf-export .report-param i{color:#333!important;font-style:normal;font-weight:700;margin-right:2mm}
+.pdf-export .report-files{margin:0 0 6mm!important;padding:0 0 3mm;border-bottom:1px solid #bbb;color:#222!important;font-size:9.5pt!important;overflow-wrap:anywhere}
+.pdf-export .report-step{break-inside:avoid-page;page-break-inside:avoid;margin:0 0 5mm!important;padding:1mm 0 1mm 4mm!important;border-left:3px solid #222!important;background:#fff!important;color:#111!important}
+.pdf-export .report-step h4{margin:0 0 2mm!important;color:#111!important;font-family:"Heiti SC","Microsoft YaHei",Arial,sans-serif;font-size:12pt!important;line-height:1.45;font-weight:800}
+.pdf-export .report-step p,.pdf-export .report-content,.pdf-export p,.pdf-export li,.pdf-export td,.pdf-export th{color:#111!important;font-size:10.5pt!important;line-height:1.78!important}
+.pdf-export .report-step p{margin:1.5mm 0!important;white-space:pre-wrap;overflow-wrap:anywhere;orphans:3;widows:3}
+.pdf-export .report-badge{border:1px solid #555!important;background:#fff!important;color:#111!important;padding:1px 6px!important}
+.pdf-export .report-metrics{display:grid!important;grid-template-columns:repeat(3,1fr);gap:3mm;margin:0 0 6mm!important}
+.pdf-export .report-metrics .metric{background:#fff!important;border:1px solid #666!important;border-top:2px solid #111!important;color:#111!important;box-shadow:none!important}
+.pdf-export .report-metrics .metric small,.pdf-export .report-metrics .metric b,.pdf-export .report-metrics .metric span{color:#111!important}
+.pdf-export table{width:100%;border-collapse:collapse;background:#fff!important;color:#111!important;break-inside:avoid-page}
+.pdf-export th,.pdf-export td{border:1px solid #666!important;background:#fff!important;padding:2mm 3mm!important;text-align:left}
+.pdf-export h1,.pdf-export h2,.pdf-export h3,.pdf-export h4,.pdf-export h5,.pdf-export h6,.pdf-export strong,.pdf-export b,.pdf-export span,.pdf-export div{color:inherit}
+.pdf-export .seal-line{position:absolute!important}
+.pdf-export .report-actions,.pdf-export .preview-bottom-bar,.pdf-export .compose-bar,.pdf-export button{display:none!important}
+.pdf-export .katex,.pdf-export .katex *,.pdf-export math,.pdf-export math *{color:#111!important}
+.pdf-export .katex{font-size:1em}
+.pdf-export .katex>.katex-html{display:none!important}
+.pdf-export .katex>.katex-mathml{display:inline!important;position:static!important;width:auto!important;height:auto!important;overflow:visible!important;clip:auto!important;white-space:normal!important}
+.pdf-export math{font-family:"STIX Two Math","Times New Roman",serif}
+`;
+    const documentHtml = `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>${localStyles}\n${printStyles}</style></head><body>${safePdfHtml(input.html)}</body></html>`;
     fs.writeFileSync(htmlPath, documentHtml, { mode: 0o600 });
     const chromeArgs = [
       '--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--disable-extensions',

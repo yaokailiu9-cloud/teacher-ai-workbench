@@ -267,7 +267,7 @@
     clone.querySelectorAll('[contenteditable]').forEach(node => node.removeAttribute('contenteditable'));
     const scope = element.closest('.wq-page,.wa-page,.spec-page,.tool-page');
     const scopeClass = scope ? [...scope.classList].filter(name => /^[A-Za-z0-9_-]+$/.test(name)).join(' ') : '';
-    const exportHtml = scopeClass ? `<div class="${scopeClass}">${clone.outerHTML}</div>` : clone.outerHTML;
+    const exportHtml = `<div class="pdf-export${scopeClass ? ` ${scopeClass}` : ''}">${clone.outerHTML}</div>`;
     let response;
     try {
       response = await fetch('/api/pdf', {

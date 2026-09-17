@@ -26,7 +26,11 @@ assert "chatAgent" in learning_js and "prepareFiles" in learning_js and "subject
 question_sense_rules = (root / "question-sense-rules.js").read_text()
 for marker in ("examiner_intent", "source_answer", "source_explanation", "knowledge", "method", "trap", "命题目标", "决定性证据", "干扰机制"):
     assert marker in question_sense_rules, f"missing question-sense rule marker: {marker}"
-assert "question-sense-rules.js?v=53" in (root / "index.html").read_text(), "question-sense rules must load before agent config"
+assert "question-sense-rules.js?v=54" in (root / "index.html").read_text(), "question-sense rules must load before agent config"
+assert 'class="pdf-export' in learning_js, "PDF export must use the print-template scope"
+serve_js = (root / ".claude" / "serve.js").read_text()
+for marker in ("@page{size:A4", ".pdf-export .report-step", "color:#111!important", "break-inside:avoid-page"):
+    assert marker in serve_js, f"missing PDF print style: {marker}"
 assert (root / "SEVEN_TOOL_AUDIT.md").exists(), "missing seven-tool audit"
 site_data = json.loads((root / "sites.json").read_text())
 assert len(site_data.get("sites", [])) == 24, "site catalog must contain 24 tools"
