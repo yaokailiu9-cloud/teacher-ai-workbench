@@ -158,7 +158,6 @@ sections 必须恰好包含 task、constraint、data、implicit、distractor、s
       if(!el){el=document.createElement('p');el.dataset.qrExportError='';el.setAttribute('role','alert');result.prepend(el);}
       el.textContent=message;
     }
-    window.LearningCore?.mountAgentPanel(form,'17');
     window.scrollTo(0,0);
     return true;
   }

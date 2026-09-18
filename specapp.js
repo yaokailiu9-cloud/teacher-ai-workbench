@@ -618,7 +618,6 @@ window.renderSpecPage = function (id) {
     (right.length ? `<div class="spec-result">${resultHtml}</div>` : '') +
     `</div></section>`;
   wireBehaviors(app, page);
-  window.LearningCore?.mountAgentPanel(app.querySelector('.spec-formcol'), page.id);
   window.scrollTo(0, 0);
   return true;
 };

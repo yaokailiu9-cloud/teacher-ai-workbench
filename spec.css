@@ -43,7 +43,6 @@
 .qr-page .qr-restatement{margin-top:14px;padding:14px;background:#eff6f7;border-left:3px solid #21818c;font-size:13px}
 .qr-page .qr-question+.qr-question{margin-top:30px;border-top:2px solid #ccd4db;padding-top:24px}
 .qr-page .qr-empty{padding:32px 14px;line-height:2;min-height:300px}
-.qr-page .agent-panel{margin-top:18px}
 @media(max-width:1200px){.qr-page .qr-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.qr-page .qr-preview{grid-template-columns:1fr}.qr-page .qr-preview dl{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;border:0;border-top:1px solid #ddd;padding:12px 0 0}.qr-page dt{margin:0}}
 @media(max-width:800px){.qr-page .spec-columns{grid-template-columns:1fr}.qr-page .qr-title{display:block}.qr-page .spec-result{padding:16px}}
 @media(max-width:520px){.qr-page .qr-grid{grid-template-columns:1fr}}

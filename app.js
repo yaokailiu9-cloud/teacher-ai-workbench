@@ -73,7 +73,6 @@ function wrongQuestionPage(t){
   const $=id=>document.getElementById(id);
   const form=$('wqForm'), msg=$('wqMsg'), file=$('wrongQuestionFile'), uploadStatus=$('uploadStatus'), analysisBox=$('analysisResult'), preview=$('previewWrapper'), loading=$('wqLoading'), progress=$('wqProgress'), progressText=$('wqProgressText'), origPanel=$('liveOriginalPanel'), origImg=$('liveOriginalImage'), selectMode=$('selectMode'), composeBar=$('composeBar'), paper=$('paper'), downloadBar=$('downloadBar');
   let originalImage=null, currentQuestions=null, currentAnalysis=null;
-  window.LearningCore?.mountAgentPanel(form, '07');
   form.querySelectorAll('.qtype-tag').forEach(tag=>tag.addEventListener('click',()=>tag.classList.toggle('active')));
   const ocrConfirm=$('ocrConfirm'), questionTextInput=$('questionTextInput');
   file.addEventListener('change',()=>{

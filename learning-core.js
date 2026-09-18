@@ -347,35 +347,6 @@
     });
   }
 
-  function mountAgentPanel(container, toolId) {
-    const profile = window.AgentRegistry?.get(toolId);
-    if (!container || !profile || container.querySelector(`[data-agent-config="${toolId}"]`)) return;
-    const esc = value => String(value ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-    const panel = document.createElement('details');
-    panel.className = 'agent-config';
-    panel.dataset.agentConfig = toolId;
-    panel.innerHTML = `<summary><span>AI 智能体配置</span><b>${esc(profile.name)}</b></summary><div class="agent-config-body"><p>${esc(profile.objective)}</p><div class="agent-tools">${profile.tools.map(tool => `<span>${esc(tool)}</span>`).join('')}</div><p class="agent-api" data-agent-api>生成服务：正在检测…</p><label>系统提示词<textarea data-agent-prompt>${esc(profile.systemPrompt)}</textarea></label><small>配置仅保存在当前浏览器；资料读取、学科锁定、结构校验与失败重试不会被关闭。API Key 只允许在服务端环境变量中配置。</small><div class="agent-actions"><button type="button" data-agent-save>保存配置</button><button type="button" data-agent-reset>恢复默认</button></div><p class="agent-status" aria-live="polite"></p></div>`;
-    container.append(panel);
-    const prompt = panel.querySelector('[data-agent-prompt]');
-    const status = panel.querySelector('.agent-status');
-    const apiStatus = panel.querySelector('[data-agent-api]');
-    fetch('/api/status').then(response => response.json()).then(data => {
-      apiStatus.textContent = data.configured
-        ? `生成服务：${data.provider} · ${data.model}`
-        : '生成服务：未配置 API Key（资料解析可用，AI 生成不可用）';
-      apiStatus.classList.toggle('missing', !data.configured);
-    }).catch(() => { apiStatus.textContent = '生成服务：无法读取状态'; apiStatus.classList.add('missing'); });
-    panel.querySelector('[data-agent-save]').addEventListener('click', () => {
-      window.AgentRegistry.savePrompt(toolId, prompt.value);
-      status.textContent = '已保存，下一次生成立即生效。';
-    });
-    panel.querySelector('[data-agent-reset]').addEventListener('click', () => {
-      window.AgentRegistry.reset(toolId);
-      prompt.value = window.AgentRegistry.get(toolId).systemPrompt;
-      status.textContent = '已恢复默认配置。';
-    });
-  }
-
   window.LearningCore = {
     prepareFiles,
     normalizeSubject,
@@ -390,6 +361,5 @@
     composeUserContent,
     chatGrounded,
     chatAgent,
-    mountAgentPanel,
   };
 })();
