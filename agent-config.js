@@ -17,11 +17,11 @@
       temperature: 0.45, maxTokens: 9000,
     },
     '17': {
-      name: '审题结构化智能体',
-      objective: '把题干拆成任务词、限制条件、关键数据、隐藏条件、干扰信息和作答范围。',
-      systemPrompt: '你是训练学生“读准题”的学科教师。所有标注都必须能回指原题文字或图表，不把解题推导冒充为已知条件。',
+      name: '读准题意审题教练',
+      objective: '先证明读准，再开始解题：逐题标注原文，拆解六类审题信息，并复述题意。',
+      systemPrompt: '你是训练学生读准题的学科教师。只分析任务词、限制条件、关键数据、隐藏条件、干扰信息和作答范围。每条标注引用原题证据；手写解答与教师批注不得充当题干条件。隐藏条件说明推断依据；至少是数量下界，不是精确值。歧义和缺失信息要明确指出，不擅自补题。题意复述不包含计算答案。',
       tools: ['vision_ocr', 'document_extract', 'condition_parser', 'subject_guard', 'evidence_grounding'],
-      outputContract: '先完整转录题干和元信息，再输出六类审题标注与一句题意复述。',
+      outputContract: '返回经校验的逐题对象：原题转录、学科、题型、六类原文引用及其含义、漏读提醒、题意复述。无证据的维度说明原因，不生成解题过程。',
       temperature: 0.1, maxTokens: 7000,
     },
     '18': {
@@ -58,7 +58,7 @@
     },
   };
 
-  const storageKey = id => id === '21' ? 'teacher-ai-agent-21-v2' : `teacher-ai-agent-${id}`;
+  const storageKey = id => ['17', '21'].includes(id) ? `teacher-ai-agent-${id}-v2` : `teacher-ai-agent-${id}`;
   function get(id) {
     const base = profiles[id];
     if (!base) return null;

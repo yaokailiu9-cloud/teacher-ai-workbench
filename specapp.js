@@ -594,6 +594,7 @@ function wireErrorDiagnosisExtras(rootEl) {
 }
 
 window.renderSpecPage = function (id) {
+  if (id === '17' && window.QuestionReview) return window.QuestionReview.render();
   const key = IDMAP[id];
   if (!key) return false;
   const page = PAGES[key];

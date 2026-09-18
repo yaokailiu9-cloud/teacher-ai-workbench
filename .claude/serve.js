@@ -133,7 +133,7 @@ function callAnthropic(payload) {
   });
 }
 
-function callZhipu(messages, maxTokens, temperature, hasImages) {
+function callZhipu(messages, maxTokens, temperature, hasImages, responseFormat) {
   return new Promise((resolve, reject) => {
     const baseUrl = (process.env.OPENAI_BASE_URL || process.env.ZHIPU_BASE_URL || ZHIPU_BASE_URL).replace(/\/+$/, '');
     const configuredModel = process.env.OPENAI_MODEL || process.env.ZHIPU_MODEL || ZHIPU_DEFAULT_MODEL;
@@ -147,6 +147,7 @@ function callZhipu(messages, maxTokens, temperature, hasImages) {
     // 这些工具已有显式证据链与结构校验，默认关闭隐藏推理以降低交互延迟。
     if (/^qwen/i.test(configuredModel) && process.env.OPENAI_ENABLE_THINKING !== 'true') payload.enable_thinking = false;
     if (Number.isFinite(temperature)) payload.temperature = temperature;
+    if (responseFormat?.type === 'json_object') payload.response_format = { type: 'json_object' };
     const request = https.request(`${baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
@@ -161,13 +162,23 @@ function callZhipu(messages, maxTokens, temperature, hasImages) {
         let data;
         try { data = JSON.parse(body); } catch { return reject(Object.assign(new Error('invalid upstream response'), { status: 502 })); }
         if (response.statusCode < 200 || response.statusCode >= 300) {
+          // 部分 OpenAI 兼容网关尚未实现 response_format。结构化模式被拒绝时
+          // 自动去掉该参数重试，前端仍会执行自己的解析与归一化兜底。
+          if (responseFormat && [400, 404, 422].includes(response.statusCode)) {
+            return callZhipu(messages, maxTokens, temperature, hasImages, null).then(resolve, reject);
+          }
           const error = new Error(data?.error?.message || `upstream ${response.statusCode}`);
           error.status = response.statusCode === 429 ? 429 : 502;
           error.expose = true;
           return reject(error);
         }
-        const content = data?.choices?.[0]?.message?.content;
-        if (typeof content !== 'string' || !content) return reject(Object.assign(new Error('missing upstream content'), { status: 502 }));
+        const rawContent = data?.choices?.[0]?.message?.content;
+        const content = typeof rawContent === 'string'
+          ? rawContent
+          : Array.isArray(rawContent)
+            ? rawContent.map(part => typeof part === 'string' ? part : part?.text || '').join('\n')
+            : rawContent && typeof rawContent === 'object' ? JSON.stringify(rawContent) : '';
+        if (!content) return reject(Object.assign(new Error('missing upstream content'), { status: 502 }));
         resolve({ content, usage: data.usage || null });
       });
     });
@@ -239,6 +250,7 @@ async function handleChat(req, res) {
   }
   const maxTokens = Number.isFinite(input.max_tokens) ? Math.min(Math.max(Math.floor(input.max_tokens), 1), 16000) : 4000;
   const temperature = Number.isFinite(input.temperature) ? input.temperature : undefined;
+  const responseFormat = input?.response_format?.type === 'json_object' ? { type: 'json_object' } : null;
   try {
     if (provider === 'zhipu') {
       // 智谱兼容 OpenAI 消息格式，system 角色可直接传递；图片分片还原为 image_url 形式。
@@ -248,7 +260,7 @@ async function handleChat(req, res) {
       if (!zhipuMessages.some(m => m.role === 'user')) {
         return sendJson(res, 400, { error: { code: 'INVALID_MESSAGES', message: '至少需要一条 user 消息。' } });
       }
-      return sendJson(res, 200, await callZhipu(zhipuMessages, maxTokens, temperature, imageCount > 0));
+      return sendJson(res, 200, await callZhipu(zhipuMessages, maxTokens, temperature, imageCount > 0, responseFormat));
     }
     const system = normalized.filter(message => message.role === 'system').map(message => message.content).join('\n').trim();
     const anthropicMessages = normalized.filter(message => message.role !== 'system').map(message => ({
